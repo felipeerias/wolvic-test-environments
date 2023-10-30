@@ -44,9 +44,9 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 ## Environments
 
-- `abovetheclouds`: Above the clouds by Paul (@paul_paul_paul at Sketchfab), CC Attribution)
-- `animesky`: Anime sky by Paul (@paul_paul_paul at Sketchfab), CC Attribution)
-- `autumnforest`: Autumn forest by Paul (@paul_paul_paul at Sketchfab), CC Attribution)
-- `basicsky`: Basic sky by Paul (@paul_paul_paul at Sketchfab), CC Attribution)
-- `futuristiccity`: Futuristic city by Paul (@paul_paul_paul at Sketchfab), CC Attribution)
-- `snowycabin`: Snowy cabin by Paul (@paul_paul_paul at Sketchfab), CC Attribution)
+- `abovetheclouds`: Above the clouds by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
+- `animesky`: Anime sky by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
+- `autumnforest`: Autumn forest by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
+- `basicsky`: Basic sky by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
+- `futuristiccity`: Futuristic city by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
+- `snowycabin`: Snowy cabin by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
