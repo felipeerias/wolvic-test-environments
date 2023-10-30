@@ -54,3 +54,9 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 - `futuristiccity`: Futuristic city by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
 - `snowycabin`: Snowy cabin by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
 - `milkyway`: Sky Pano Milkyway by MozillaHubs (@mozillareality at Sketchfab), CC Attribution-NonCommercial-ShareAlike.
+
+
+## Testing
+
+To test these environments on Wolvic 1.5.1, replace the value of the build variable `PROPS_ENDPOINT` with `"https://darker.ink/wolvic-test-environments/props.json"` and recompile.
+
