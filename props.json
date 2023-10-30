@@ -9,22 +9,28 @@
         "payload": "https://igalia.github.io/wolvic-3D-environments/spring/spring.zip"
       },
       {
-        "value": "abovetheclouds",
-        "title": "Above the clouds by Paul",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/abovetheclouds/abovetheclouds.png",
-        "payload": "https://darker.ink/wolvic-test-environments/abovetheclouds/abovetheclouds.zip"
+        "value": "winterforest",
+        "title": "Sky pano - Winter forest by MozillaHubs",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/winterforest/winterforest.png",
+        "payload": "https://darker.ink/wolvic-test-environments/winterforest/winterforest.zip"
+      }
+      {
+        "value": "bcnrooftop",
+        "title": "Sky pano - Barcelona rooftop by MozillaHubs",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/bcnrooftop/bcnrooftop.png",
+        "payload": "https://darker.ink/wolvic-test-environments/bcnrooftop/bcnrooftop.zip"
       },
       {
-        "value": "animesky",
-        "title": "Anime sky by Paul",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/animesky/animesky.png",
-        "payload": "https://darker.ink/wolvic-test-environments/animesky/animesky.zip"
+        "value": "malibuoverlook",
+        "title": "Sky pano - Malibu overlook by MozillaHubs",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/malibuoverlook/malibuoverlook.png",
+        "payload": "https://darker.ink/wolvic-test-environments/malibuoverlook/malibuoverlook.zip"
       },
       {
-        "value": "autumnforest",
-        "title": "Autumn forest by Paul",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.png",
-        "payload": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.zip"
+        "value": "milkyway",
+        "title": "Sky pano - Milkyway by MozillaHubs",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/milkyway/milkyway.png",
+        "payload": "https://darker.ink/wolvic-test-environments/milkyway/milkyway.zip"
       },
       {
         "value": "basicsky",
@@ -33,10 +39,22 @@
         "payload": "https://darker.ink/wolvic-test-environments/basicsky/basicsky.zip"
       },
       {
-        "value": "futuristiccity",
-        "title": "Futuristic city by Paul",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/futuristiccity/futuristiccity.png",
-        "payload": "https://darker.ink/wolvic-test-environments/futuristiccity/futuristiccity.zip"
+        "value": "animesky",
+        "title": "Anime sky by Paul",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/animesky/animesky.png",
+        "payload": "https://darker.ink/wolvic-test-environments/animesky/animesky.zip"
+      },
+      {
+        "value": "abovetheclouds",
+        "title": "Above the clouds by Paul",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/abovetheclouds/abovetheclouds.png",
+        "payload": "https://darker.ink/wolvic-test-environments/abovetheclouds/abovetheclouds.zip"
+      },
+      {
+        "value": "autumnforest",
+        "title": "Autumn forest by Paul",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.png",
+        "payload": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.zip"
       },
       {
         "value": "snowycabin",
@@ -45,11 +63,23 @@
         "payload": "https://darker.ink/wolvic-test-environments/snowycabin/snowycabin.zip"
       },
       {
-        "value": "milkyway",
-        "title": "Sky pano - Milkyway by MozillaHubs",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/milkyway/milkyway.png",
-        "payload": "https://darker.ink/wolvic-test-environments/milkyway/milkyway.zip"
-      }
+        "value": "futuristiccity",
+        "title": "Futuristic city by Paul",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/futuristiccity/futuristiccity.png",
+        "payload": "https://darker.ink/wolvic-test-environments/futuristiccity/futuristiccity.zip"
+      },
+      {
+        "value": "fairytalegarden",
+        "title": "Fairytale garden by Giimann",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/fairytalegarden/fairytalegarden.png",
+        "payload": "https://darker.ink/wolvic-test-environments/fairytalegarden/fairytalegarden.zip"
+      },
+      {
+        "value": "fantasylandscape3",
+        "title": "Fantasy landscape 3 by Giimann",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/fantasylandscape3/fantasylandscape3.png",
+        "payload": "https://darker.ink/wolvic-test-environments/fantasylandscape3/fantasylandscape3.zip"
+      },
     ]
   },
   "1.5": {

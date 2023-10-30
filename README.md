@@ -47,13 +47,18 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 ## Environments
 
-- `abovetheclouds`: Above the clouds by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
-- `animesky`: Anime sky by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
-- `autumnforest`: Autumn forest by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
+- `winterforest`: Sky pano - Winter forest by MozillaHubs (@mozillareality at Sketchfab), CC Attribution-NonCommercial-ShareAlike.
+- `bcnrooftop`: Sky pano - Barcelona rooftop by MozillaHubs (@mozillareality at Sketchfab), CC Attribution-NonCommercial-ShareAlike.
+- `malibuoverlook`: Sky pano - Malibu overlook by MozillaHubs (@mozillareality at Sketchfab), CC Attribution-NonCommercial-ShareAlike.
+- `milkyway`: Sky pano - Milkyway by MozillaHubs (@mozillareality at Sketchfab), CC Attribution-NonCommercial-ShareAlike.
 - `basicsky`: Basic sky by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
-- `futuristiccity`: Futuristic city by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
+- `animesky`: Anime sky by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
+- `abovetheclouds`: Above the clouds by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
+- `autumnforest`: Autumn forest by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
 - `snowycabin`: Snowy cabin by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
-- `milkyway`: Sky Pano Milkyway by MozillaHubs (@mozillareality at Sketchfab), CC Attribution-NonCommercial-ShareAlike.
+- `futuristiccity`: Futuristic city by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
+- `fairytalegarden`: Fairytale garden by Giimann (@giimann at Sketchfab), CC Attribution.
+- `fantasylandscape3`: Fantasy landscape 3 by Giimann (@giimann at Sketchfab), CC Attribution.
 
 
 ## Testing
