@@ -8,6 +8,9 @@ To get started, you will need a set of 6 PNG images forming a cubemap.
 
 If instead of a cubemap you have one large panorama image, you can convert it with this tool:https://jaxry.github.io/panorama-to-cubemap/
 
+The source files must have the following names: `negx.png`, `negy.png`, `negz.png`, `posx.png`, `posy.png`, `posz.png`.
+
+
 ```shell
 # Define the environment's id
 ENVNAME=myenvironment
@@ -39,7 +42,7 @@ convert posx.png -resize 512x512 -gravity Center -crop 256x256+0+0 ${ENVNAME}.pn
 mkdir ../wolvic-test-environments/${ENVNAME}
 cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
-# Finally, update props.json
+# Finally, remember to update props.json
 ```
 
 ## Environments
@@ -50,3 +53,4 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 - `basicsky`: Basic sky by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
 - `futuristiccity`: Futuristic city by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
 - `snowycabin`: Snowy cabin by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
+- `milkyway`: Sky Pano Milkyway by MozillaHubs (@mozillareality at Sketchfab), CC Attribution-NonCommercial-ShareAlike.

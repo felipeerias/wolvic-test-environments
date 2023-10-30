@@ -43,6 +43,12 @@
         "title": "Snowy cabin by Paul",
         "thumbnail": "https://darker.ink/wolvic-test-environments/snowycabin/snowycabin.png",
         "payload": "https://darker.ink/wolvic-test-environments/snowycabin/snowycabin.zip"
+      },
+      {
+        "value": "milkyway",
+        "title": "Sky pano - Milkyway by MozillaHubs",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/milkyway/milkyway.png",
+        "payload": "https://darker.ink/wolvic-test-environments/milkyway/milkyway.zip"
       }
     ]
   },
