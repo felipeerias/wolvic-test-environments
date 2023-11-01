@@ -66,5 +66,9 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 ## Testing
 
-To test these environments on Wolvic 1.5.1, replace the value of the build variable `PROPS_ENDPOINT` with `"https://darker.ink/wolvic-test-environments/props.json"` and recompile.
+To test these environments on Wolvic 1.5.1, replace the value of the build variable `PROPS_ENDPOINT` in `app/build.gradle` with `"https://darker.ink/wolvic-test-environments/props.json"` and recompile.
+
+```
+buildConfigField 'String', 'PROPS_ENDPOINT', '"https://darker.ink/wolvic-test-environments/props.json"'
+```
 
