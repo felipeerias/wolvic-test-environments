@@ -23,12 +23,11 @@ mogrify -resize 1024x1024! *.png
 zip ${ENVNAME}_misc.zip *.png 
 
 # KTX textures
-for f in *.png; do mipgen -f ktx -m 1 -c etc_rgb8_rgba_100 $f $(basename ${f%.*}).ktx; done
-zip ${ENVNAME}.zip *.ktx
-cp ${ENVNAME}.zip ${ENVNAME}_ktx.zip
+for f in *.png; do mipgen -f ktx -m 1 -c etc_rgb8_rgba_100 --strip-alpha "$f" "$(basename "${f%.*}").ktx"; done
+zip "${ENVNAME}.zip" *.ktx
 
 # KTX textures in sRGB color format
-for f in *.png; do mipgen -f ktx -m 1 -c etc_srgb8_rgba_100 --strip-alpha $f $(basename ${f%.*})_srgb.ktx; done
+for f in *.png; do mipgen -f ktx -m 1 -c etc_srgb8_rgba_100 --strip-alpha "$f" "$(basename "${f%.*}")_srgb.ktx"; done
 zip ${ENVNAME}_ktx_srgb.zip *_srgb.ktx
 
 # PNG images in sRGB color format
@@ -47,19 +46,21 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 ## Environments
 
-- `winterforest`: Sky pano - Winter forest by MozillaHubs (@mozillareality at Sketchfab), CC Attribution-NonCommercial-ShareAlike.
-- `bcnrooftop`: Sky pano - Barcelona rooftop by MozillaHubs (@mozillareality at Sketchfab), CC Attribution-NonCommercial-ShareAlike.
-- `malibuoverlook`: Sky pano - Malibu overlook by MozillaHubs (@mozillareality at Sketchfab), CC Attribution-NonCommercial-ShareAlike.
-- `milkyway`: Sky pano - Milkyway by MozillaHubs (@mozillareality at Sketchfab), CC Attribution-NonCommercial-ShareAlike.
-- `basicsky`: Basic sky by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
-- `animesky`: Anime sky by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
-- `abovetheclouds`: Above the clouds by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
-- `autumnforest`: Autumn forest by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
-- `snowycabin`: Snowy cabin by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
-- `futuristiccity`: Futuristic city by Paul (@paul_paul_paul at Sketchfab), CC Attribution.
-- `fairytalegarden`: Fairytale garden by Giimann (@giimann at Sketchfab), CC Attribution.
-- `fantasylandscape3`: Fantasy landscape 3 by Giimann (@giimann at Sketchfab), CC Attribution.
-
+- `winterforest`: Winter Forest by MozillaHubs at Sketchfab (CC BY-NC-SA)
+- `bcnrooftop`: Barcelona Rooftops by MozillaHubs at Sketchfab (CC BY-NC-SA)
+- `malibuoverlook`: Malibu Overlook by MozillaHubs at Sketchfab (CC BY-NC-SA)
+- `monumentvalley`: Monument Valley Lookout by MozillaHubs at Sketchfab (CC BY-NC-SA)
+- `milkyway`: "Milkyway by MozillaHubs at Sketchfab (CC BY-NC-SA)
+- `basicsky`: "Basic Sky by Paul at Sketchfab (CC BY)
+- `animesky`: "Anime Sky by Paul at Sketchfab (CC BY)
+- `abovetheclouds`: Above The Clouds by Paul at Sketchfab (CC BY)
+- `autumnforest`: Autumn Forest by Paul at Sketchfab (CC BY)
+- `snowycabin`: Snowy Cabin by Paul at Sketchfab (CC BY)
+- `futuristiccity`: Roftops Futuristic City by Paul at Sketchfab (CC BY)
+- `fairytalegarden`: Fairytale_Garden by Giimann at Sketchfab (CC BY)
+- `fantasylandscape3`: Fantasy Landscape 3 by Giimann at Sketchfab (CC BY)
+- `nightforest`: Night Forest With Aurora Sky by Architecture_Interior at Sketchfab (CC BY)
+- `lowpolyroom`: Stylized Room by Van_Twinkle at Sketchfab (CC BY)
 
 ## Testing
 
