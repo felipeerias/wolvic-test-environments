@@ -46,21 +46,23 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 ## Environments
 
-- `winterforest`: Winter Forest by MozillaHubs at Sketchfab (CC BY-NC-SA)
-- `bcnrooftop`: Barcelona Rooftops by MozillaHubs at Sketchfab (CC BY-NC-SA)
-- `malibuoverlook`: Malibu Overlook by MozillaHubs at Sketchfab (CC BY-NC-SA)
-- `monumentvalley`: Monument Valley Lookout by MozillaHubs at Sketchfab (CC BY-NC-SA)
-- `milkyway`: "Milkyway by MozillaHubs at Sketchfab (CC BY-NC-SA)
-- `basicsky`: "Basic Sky by Paul at Sketchfab (CC BY)
-- `animesky`: "Anime Sky by Paul at Sketchfab (CC BY)
-- `abovetheclouds`: Above The Clouds by Paul at Sketchfab (CC BY)
-- `autumnforest`: Autumn Forest by Paul at Sketchfab (CC BY)
-- `snowycabin`: Snowy Cabin by Paul at Sketchfab (CC BY)
-- `futuristiccity`: Roftops Futuristic City by Paul at Sketchfab (CC BY)
-- `fairytalegarden`: Fairytale_Garden by Giimann at Sketchfab (CC BY)
-- `fantasylandscape3`: Fantasy Landscape 3 by Giimann at Sketchfab (CC BY)
-- `nightforest`: Night Forest With Aurora Sky by Architecture_Interior at Sketchfab (CC BY)
-- `lowpolyroom`: Stylized Room by Van_Twinkle at Sketchfab (CC BY)
+|    | ID | Title | Author | License |
+| -- | -- | ----- | ------ | ------- |
+| ![](winterforest/winterforest.png) | `winterforest` | _Winter Forest_ | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
+| ![](bcnrooftop/bcnrooftop.png) | `bcnrooftop` | _Barcelona Rooftops_ | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
+| ![](malibuoverlook/malibuoverlook.png) | `malibuoverlook` | _Malibu Overlook_ | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
+| ![](monumentvalley/monumentvalley.png) | `monumentvalley` | _Monument Valley Lookout_ | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
+| ![](milkyway/milkyway.png) | `milkyway` | _"Milkyway_ | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
+| ![](basicsky/basicsky.png) | `basicsky` | _"Basic Sky_ | **Paul** at Sketchfab | CC BY |
+| ![](animesky/animesky.png) | `animesky` | _"Anime Sky_ | **Paul** at Sketchfab | CC BY |
+| ![](abovetheclouds/abovetheclouds.png) | `abovetheclouds` | _Above The Clouds_ | **Paul** at Sketchfab | CC BY |
+| ![](autumnforest/autumnforest.png) | `autumnforest` | _Autumn Forest_ | **Paul** at Sketchfab | CC BY |
+| ![](snowycabin/snowycabin.png) | `snowycabin` | _Snowy Cabin_ | **Paul** at Sketchfab | CC BY |
+| ![](futuristiccity/futuristiccity.png) | `futuristiccity` | _Roftops Futuristic City_ | **Paul** at Sketchfab | CC BY |
+| ![](fairytalegarden/fairytalegarden.png) | `fairytalegarden` | _Fairytale_Garden_ | **Giimann** at Sketchfab | CC BY |
+| ![](fantasylandscape3/fantasylandscape3.png) | `fantasylandscape3` | _Fantasy Landscape 3_ | **Giimann** at Sketchfab | CC BY |
+| ![](nightforest/nightforest.png) | `nightforest` | _Night Forest With Aurora Sky_ | **Architecture_Interior** at Sketchfab | CC BY |
+| ![](lowpolyroom/lowpolyroom.png) | `lowpolyroom` | _Stylized Room_ | **Van_Twinkle** at Sketchfab | CC BY |
 
 ## Testing
 
