@@ -52,9 +52,9 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 | ![](bcnrooftop/bcnrooftop.png) | `bcnrooftop` | _Barcelona Rooftops_ | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
 | ![](malibuoverlook/malibuoverlook.png) | `malibuoverlook` | _Malibu Overlook_ | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
 | ![](monumentvalley/monumentvalley.png) | `monumentvalley` | _Monument Valley Lookout_ | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
-| ![](milkyway/milkyway.png) | `milkyway` | _"Milkyway_ | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
-| ![](basicsky/basicsky.png) | `basicsky` | _"Basic Sky_ | **Paul** at Sketchfab | CC BY |
-| ![](animesky/animesky.png) | `animesky` | _"Anime Sky_ | **Paul** at Sketchfab | CC BY |
+| ![](milkyway/milkyway.png) | `milkyway` | _Milkyway_ | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
+| ![](basicsky/basicsky.png) | `basicsky` | _Basic Sky_ | **Paul** at Sketchfab | CC BY |
+| ![](animesky/animesky.png) | `animesky` | _Anime Sky_ | **Paul** at Sketchfab | CC BY |
 | ![](abovetheclouds/abovetheclouds.png) | `abovetheclouds` | _Above The Clouds_ | **Paul** at Sketchfab | CC BY |
 | ![](autumnforest/autumnforest.png) | `autumnforest` | _Autumn Forest_ | **Paul** at Sketchfab | CC BY |
 | ![](snowycabin/snowycabin.png) | `snowycabin` | _Snowy Cabin_ | **Paul** at Sketchfab | CC BY |
