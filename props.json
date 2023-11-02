@@ -97,6 +97,12 @@
         "title": "Stylized Room by Van_Twinkle (CC BY)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/nightforest/nightforest.png",
         "payload": "https://darker.ink/wolvic-test-environments/nightforest/nightforest.zip"
+      },
+      {
+        "value": "tychoskymap",
+        "title": "Tycho Catalog Skymap by NASA/Goddard Space Flight Center",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/tychoskymap/tychoskymap.png",
+        "payload": "https://darker.ink/wolvic-test-environments/tychoskymap/tychoskymap.zip"
       }
     ]
   },
