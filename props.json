@@ -109,6 +109,12 @@
         "title": "Pretville Cinema by D. Savva and J. Guest (CC0)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/pretvillecinema/pretvillecinema.png",
         "payload": "https://darker.ink/wolvic-test-environments/pretvillecinema/pretvillecinema.zip"
+      },
+      {
+        "value": "winternight",
+        "title": "Winter Night City by Paul (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/winternight/winternight.png",
+        "payload": "https://darker.ink/wolvic-test-environments/winternight/winternight.zip"
       }
     ]
   },
