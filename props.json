@@ -45,6 +45,12 @@
         "payload": "https://darker.ink/wolvic-test-environments/basicsky/basicsky.zip"
       },
       {
+        "value": "basicsky alt",
+        "title": "Basic Sky (alt) by Paul (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/basicskyalt/basicsky.png",
+        "payload": "https://darker.ink/wolvic-test-environments/basicskyalt/basicsky.zip"
+      },
+      {
         "value": "animesky",
         "title": "Anime Sky by Paul (CC BY)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/animesky/animesky.png",
