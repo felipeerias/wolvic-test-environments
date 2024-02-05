@@ -4,19 +4,19 @@
     "environments": [
       {
         "value": "meadow",
-        "title": "Winter Forest by MozillaHubs (CC BY-NC-SA)",
+        "title": "Meadow by Sergej Majboroda (CC0)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/meadow/meadow.png",
         "payload": "https://darker.ink/wolvic-test-environments/meadow/meadow.zip"
       },
       {
         "value": "hayloft",
-        "title": "Winter Forest by MozillaHubs (CC BY-NC-SA)",
+        "title": "Hayloft by Adrian Kubasa (CC0)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/hayloft/hayloft.png",
         "payload": "https://darker.ink/wolvic-test-environments/hayloft/hayloft.zip"
       },
       {
         "value": "milkyway2020",
-        "title": "Winter Forest by MozillaHubs (CC BY-NC-SA)",
+        "title": "Milky Way (2020) by NASA",
         "thumbnail": "https://darker.ink/wolvic-test-environments/milkyway2020/milkyway2020.png",
         "payload": "https://darker.ink/wolvic-test-environments/milkyway2020/milkyway2020.zip"
       },
