@@ -66,6 +66,10 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 | ![](tychoskymap/tychoskymap.png) | `tychoskymap` | [_Tycho Catalog Skymap_](https://svs.gsfc.nasa.gov/3895) | **NASA/Goddard Space Flight Center** |  |
 | ![](pretvillecinema/pretvillecinema.png) | `pretvillecinema` | [_Pretville Cinema_](https://polyhaven.com/a/pretville_cinema) | **D. Savva and J. Guest** at Poly Haven | CC0 |
 | ![](winternight/winternight.png) | `winternight` | [_Winter Night_](https://sketchfab.com/3d-models/free-skybox-winter-night-9cf1663e9a8647b987ce4f439c22ff50) | **Paul** at Sketchfab | CC BY |
+| ![](hayloft/hayloft.png) | `hayloft` | [_Hayloft_](https://polyhaven.com/a/hayloft) | **Adrian Kubasa** at Poly Haven | CC0 |
+| ![](meadow/meadow.png) | `meadow` | [_Meadow_](https://polyhaven.com/a/meadow_2) | **Sergej Majboroda** at Poly Haven | CC0 |
+| ![](milkyway2020/milkyway2020.png) | `milkyway2020` | [_Milky Way (2020)_](https://svs.gsfc.nasa.gov/3895) | **NASA/Goddard Space Flight Center** |  |
+
 
 ## Testing
 

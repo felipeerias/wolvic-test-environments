@@ -3,22 +3,28 @@
     "whatsNewUrl": "https://wolvic.com/blog/release_1.5.1",
     "environments": [
       {
-        "value": "spring",
-        "title": "Spring",
-        "thumbnail": "https://igalia.github.io/wolvic-3D-environments/spring/spring.png",
-        "payload": "https://igalia.github.io/wolvic-3D-environments/spring/spring.zip"
+        "value": "meadow",
+        "title": "Winter Forest by MozillaHubs (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/meadow/meadow.png",
+        "payload": "https://darker.ink/wolvic-test-environments/meadow/meadow.zip"
+      },
+      {
+        "value": "hayloft",
+        "title": "Winter Forest by MozillaHubs (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/hayloft/hayloft.png",
+        "payload": "https://darker.ink/wolvic-test-environments/hayloft/hayloft.zip"
+      },
+      {
+        "value": "milkyway2020",
+        "title": "Winter Forest by MozillaHubs (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/milkyway2020/milkyway2020.png",
+        "payload": "https://darker.ink/wolvic-test-environments/milkyway2020/milkyway2020.zip"
       },
       {
         "value": "winterforest",
         "title": "Winter Forest by MozillaHubs (CC BY-NC-SA)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/winterforest/winterforest.png",
         "payload": "https://darker.ink/wolvic-test-environments/winterforest/winterforest.zip"
-      },
-      {
-        "value": "bcnrooftop",
-        "title": "Barcelona Rooftops by MozillaHubs (CC BY-NC-SA)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/bcnrooftop/bcnrooftop.png",
-        "payload": "https://darker.ink/wolvic-test-environments/bcnrooftop/bcnrooftop.zip"
       },
       {
         "value": "malibuoverlook",
@@ -39,12 +45,6 @@
         "payload": "https://darker.ink/wolvic-test-environments/milkyway/milkyway.zip"
       },
       {
-        "value": "basicsky",
-        "title": "Basic Sky by Paul (CC BY)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/basicsky/basicsky.png",
-        "payload": "https://darker.ink/wolvic-test-environments/basicsky/basicsky.zip"
-      },
-      {
         "value": "animesky",
         "title": "Anime Sky by Paul (CC BY)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/animesky/animesky.png",
@@ -55,12 +55,6 @@
         "title": "Above The Clouds by Paul (CC BY)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/abovetheclouds/abovetheclouds.png",
         "payload": "https://darker.ink/wolvic-test-environments/abovetheclouds/abovetheclouds.zip"
-      },
-      {
-        "value": "autumnforest",
-        "title": "Autumn Forest by Paul (CC BY)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.png",
-        "payload": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.zip"
       },
       {
         "value": "snowycabin",
@@ -93,26 +87,52 @@
         "payload": "https://darker.ink/wolvic-test-environments/lowpolyroom/lowpolyroom.zip"
       },
       {
-        "value": "nightforest",
-        "title": "Night Forest With Aurora Sky by Architecture_Interior (CC BY)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/nightforest/nightforest.png",
-        "payload": "https://darker.ink/wolvic-test-environments/nightforest/nightforest.zip"
-      },
-      {
         "value": "tychoskymap",
         "title": "Tycho Catalog Skymap by NASA/Goddard Space Flight Center",
         "thumbnail": "https://darker.ink/wolvic-test-environments/tychoskymap/tychoskymap.png",
         "payload": "https://darker.ink/wolvic-test-environments/tychoskymap/tychoskymap.zip"
       },
+
+      {
+        "value": "spring",
+        "title": "(Shipped) Spring",
+        "thumbnail": "https://igalia.github.io/wolvic-3D-environments/spring/spring.png",
+        "payload": "https://igalia.github.io/wolvic-3D-environments/spring/spring.zip"
+      },
+      {
+        "value": "bcnrooftop",
+        "title": "Barcelona Rooftops by MozillaHubs (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/bcnrooftop/bcnrooftop.png",
+        "payload": "https://darker.ink/wolvic-test-environments/bcnrooftop/bcnrooftop.zip"
+      },
+      {
+        "value": "basicsky",
+        "title": "(Shipped) Basic Sky by Paul (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/basicsky/basicsky.png",
+        "payload": "https://darker.ink/wolvic-test-environments/basicsky/basicsky.zip"
+      },
+      {
+        "value": "autumnforest",
+        "title": "(Shipped) Autumn Forest by Paul (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.png",
+        "payload": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.zip"
+      },
+      
+      {
+        "value": "nightforest",
+        "title": "(Shipped) Night Forest With Aurora Sky by Architecture_Interior (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/nightforest/nightforest.png",
+        "payload": "https://darker.ink/wolvic-test-environments/nightforest/nightforest.zip"
+      },
       {
         "value": "pretville_cinema",
-        "title": "Pretville Cinema by D. Savva and J. Guest (CC0)",
+        "title": "(Shipped) Pretville Cinema by D. Savva and J. Guest (CC0)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/pretvillecinema/pretvillecinema.png",
         "payload": "https://darker.ink/wolvic-test-environments/pretvillecinema/pretvillecinema.zip"
       },
       {
         "value": "winternight",
-        "title": "Winter Night City by Paul (CC BY)",
+        "title": "(Shipped) Winter Night City by Paul (CC BY)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/winternight/winternight.png",
         "payload": "https://darker.ink/wolvic-test-environments/winternight/winternight.zip"
       }
