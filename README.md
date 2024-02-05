@@ -47,13 +47,6 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 ## Environments
 
 ### Shipped
-spring
-autumnforest
-basicsky
-bcnrooftop
-nightforest
-pretville_cinema
-winternight
 
 |    | ID | Title | Author | License |
 | -- | -- | ----- | ------ | ------- |
