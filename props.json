@@ -92,7 +92,6 @@
         "thumbnail": "https://darker.ink/wolvic-test-environments/tychoskymap/tychoskymap.png",
         "payload": "https://darker.ink/wolvic-test-environments/tychoskymap/tychoskymap.zip"
       },
-
       {
         "value": "spring",
         "title": "(Shipped) Spring",
@@ -101,7 +100,7 @@
       },
       {
         "value": "bcnrooftop",
-        "title": "Barcelona Rooftops by MozillaHubs (CC BY-NC-SA)",
+        "title": "(Shipped) Barcelona Rooftops by MozillaHubs (CC BY-NC-SA)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/bcnrooftop/bcnrooftop.png",
         "payload": "https://darker.ink/wolvic-test-environments/bcnrooftop/bcnrooftop.zip"
       },
@@ -117,7 +116,6 @@
         "thumbnail": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.png",
         "payload": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.zip"
       },
-      
       {
         "value": "nightforest",
         "title": "(Shipped) Night Forest With Aurora Sky by Architecture_Interior (CC BY)",
