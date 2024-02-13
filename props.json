@@ -1,6 +1,6 @@
 {
-  "1.5.1": {
-    "whatsNewUrl": "https://wolvic.com/blog/release_1.5.1",
+  "1.6.0": {
+    "whatsNewUrl": "https://wolvic.com/blog/release_1.6",
     "environments": [
       {
         "value": "meadow",
@@ -19,7 +19,53 @@
         "title": "Milky Way (2020) by NASA",
         "thumbnail": "https://darker.ink/wolvic-test-environments/milkyway2020/milkyway2020.png",
         "payload": "https://darker.ink/wolvic-test-environments/milkyway2020/milkyway2020.zip"
+      }
+    ]
+  },
+  "1.5.2": {
+    "whatsNewUrl": "https://wolvic.com/blog/release_1.5.2",
+    "environments": [
+      {
+        "value": "bcnrooftop",
+        "title": "(Shipped) Barcelona Rooftops by MozillaHubs (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/bcnrooftop/bcnrooftop.png",
+        "payload": "https://darker.ink/wolvic-test-environments/bcnrooftop/bcnrooftop.zip"
       },
+      {
+        "value": "basicsky",
+        "title": "(Shipped) Basic Sky by Paul (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/basicsky/basicsky.png",
+        "payload": "https://darker.ink/wolvic-test-environments/basicsky/basicsky.zip"
+      },
+      {
+        "value": "autumnforest",
+        "title": "(Shipped) Autumn Forest by Paul (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.png",
+        "payload": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.zip"
+      },
+      {
+        "value": "nightforest",
+        "title": "(Shipped) Night Forest With Aurora Sky by Architecture_Interior (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/nightforest/nightforest.png",
+        "payload": "https://darker.ink/wolvic-test-environments/nightforest/nightforest.zip"
+      },
+      {
+        "value": "pretville_cinema",
+        "title": "(Shipped) Pretville Cinema by D. Savva and J. Guest (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/pretvillecinema/pretvillecinema.png",
+        "payload": "https://darker.ink/wolvic-test-environments/pretvillecinema/pretvillecinema.zip"
+      },
+      {
+        "value": "winternight",
+        "title": "(Shipped) Winter Night City by Paul (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/winternight/winternight.png",
+        "payload": "https://darker.ink/wolvic-test-environments/winternight/winternight.zip"
+      }
+    ]
+  },
+  "1.5.1": {
+    "whatsNewUrl": "https://wolvic.com/blog/release_1.5.1",
+    "environments": [
       {
         "value": "winterforest",
         "title": "Winter Forest by MozillaHubs (CC BY-NC-SA)",
@@ -97,42 +143,6 @@
         "title": "(Shipped) Spring",
         "thumbnail": "https://igalia.github.io/wolvic-3D-environments/spring/spring.png",
         "payload": "https://igalia.github.io/wolvic-3D-environments/spring/spring.zip"
-      },
-      {
-        "value": "bcnrooftop",
-        "title": "(Shipped) Barcelona Rooftops by MozillaHubs (CC BY-NC-SA)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/bcnrooftop/bcnrooftop.png",
-        "payload": "https://darker.ink/wolvic-test-environments/bcnrooftop/bcnrooftop.zip"
-      },
-      {
-        "value": "basicsky",
-        "title": "(Shipped) Basic Sky by Paul (CC BY)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/basicsky/basicsky.png",
-        "payload": "https://darker.ink/wolvic-test-environments/basicsky/basicsky.zip"
-      },
-      {
-        "value": "autumnforest",
-        "title": "(Shipped) Autumn Forest by Paul (CC BY)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.png",
-        "payload": "https://darker.ink/wolvic-test-environments/autumnforest/autumnforest.zip"
-      },
-      {
-        "value": "nightforest",
-        "title": "(Shipped) Night Forest With Aurora Sky by Architecture_Interior (CC BY)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/nightforest/nightforest.png",
-        "payload": "https://darker.ink/wolvic-test-environments/nightforest/nightforest.zip"
-      },
-      {
-        "value": "pretville_cinema",
-        "title": "(Shipped) Pretville Cinema by D. Savva and J. Guest (CC0)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/pretvillecinema/pretvillecinema.png",
-        "payload": "https://darker.ink/wolvic-test-environments/pretvillecinema/pretvillecinema.zip"
-      },
-      {
-        "value": "winternight",
-        "title": "(Shipped) Winter Night City by Paul (CC BY)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/winternight/winternight.png",
-        "payload": "https://darker.ink/wolvic-test-environments/winternight/winternight.zip"
       }
     ]
   },
