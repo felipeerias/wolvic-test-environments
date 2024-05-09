@@ -76,6 +76,16 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 | ![](lowpolyroom/lowpolyroom.png) | `lowpolyroom` | [_Stylized Room_](https://sketchfab.com/3d-models/skybox-stylized-room-41f386740dbb4de7af2724734f98151f) | **Van_Twinkle** at Sketchfab | CC BY |
 | ![](tychoskymap/tychoskymap.png) | `tychoskymap` | [_Tycho Catalog Skymap_](https://svs.gsfc.nasa.gov/3895) | **NASA/Goddard Space Flight Center** |  |
 | ![](hayloft/hayloft.png) | `hayloft` | [_Hayloft_](https://polyhaven.com/a/hayloft) | **Adrian Kubasa** at Poly Haven | CC0 |
+| ![](dolceaqua/dolceaqua.png) | `dolceaqua` | [Dolceacqua, Impera, Italia](https://www.flickr.com/photos/sitoo/36240831915/) | **Sitoo** at Flickr | CC BY-NC-ND |  
+| ![](japanesegarden/japanesegarden.png) | `japanesegarden` | [Japanese Garden](https://www.flickr.com/photos/vitroids/48868845128/) | **Masakazu Matsumoto** at Flickr | CC BY |  
+| ![](doublearch/doublearch.png) | `doublearch` | [Double Arch](https://www.flickr.com/photos/vitroids/48822338172/) | **Masakazu Matsumoto** at Flickr | CC BY |  
+| ![](notredameparis/notredameparis.png) | `notredameparis` | [ Notre-Dame de Paris](https://www.flickr.com/photos/gadl/403173357/) | **Alexandre Duret-Lutz** at Flickr | CC BY-SA |  
+| ![](gruyeres/gruyeres.png) | `gruyeres` | [Château de Gruyères](https://www.flickr.com/photos/gadl/11210239776/) | **Alexandre Duret-Lutz** at Flickr | CC BY-NC-SA |  
+| ![](ploumanach/ploumanach.png) | `ploumanach` | [Ploumanac'h](https://www.flickr.com/photos/gadl/22026335904/) | **Alexandre Duret-Lutz** at Flickr | CC BY-NC-SA |  
+| ![](ricefields/ricefields.png) | `ricefields` | [Rice Fields of Japan](https://www.flickr.com/photos/heiwa4126/3662789054/) | **heiwa4126** at Flickr | CC BY |  
+| ![](traintracks/traintracks.png) | `traintracks` | [Train Tracks](https://www.flickr.com/photos/eminbiole/36565746090/) | **Eric Minbiole** at Flickr | CC BY-NC |  
+| ![](tullinge/tullinge.png) | `tullinge` | [Tullinge](https://www.flickr.com/photos/simoninns/24120710880/) | **Simon Inns** at Flickr | CC BY | 
+
 
 
 ## Testing
