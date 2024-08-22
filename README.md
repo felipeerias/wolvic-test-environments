@@ -50,15 +50,19 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 |    | ID | Title | Author | License |
 | -- | -- | ----- | ------ | ------- |
+| ![](japanesegarden/japanesegarden.png) | `japanesegarden` | [Japanese Garden](https://www.flickr.com/photos/vitroids/48868845128/) | **Masakazu Matsumoto** at Flickr | CC BY |  
+| ![](doublearch/doublearch.png) | `doublearch` | [Double Arch](https://www.flickr.com/photos/vitroids/48822338172/) | **Masakazu Matsumoto** at Flickr | CC BY |  
+| ![](ploumanach/ploumanach.png) | `ploumanach` | [Ploumanac'h](https://www.flickr.com/photos/gadl/22026335904/) | **Alexandre Duret-Lutz** at Flickr | CC BY-NC-SA |  
+| ![](tullinge/tullinge.png) | `tullinge` | [Tullinge](https://www.flickr.com/photos/simoninns/24120710880/) | **Simon Inns** at Flickr | CC BY | 
+| ![](meadow/meadow.png) | `meadow` | [_Meadow_](https://polyhaven.com/a/meadow_2) | **Sergej Majboroda** at Poly Haven | CC0 |
+| ![](abovetheclouds/abovetheclouds.png) | `abovetheclouds` | [_Above The Clouds_](https://sketchfab.com/3d-models/free-skybox-above-the-clouds-77e196f5089040ffb7b4d32c6a3fc035) | **Paul** at Sketchfab | CC BY |
+| ![](milkyway2020/milkyway2020.png) | `milkyway2020` | [_Milky Way (2020)_](https://svs.gsfc.nasa.gov/3895) | **NASA/Goddard Space Flight Center** |  |
 | ![](autumnforest/autumnforest.png) | `autumnforest` | [_Autumn Forest_](https://sketchfab.com/3d-models/free-skybox-autumn-forest-3ba29976640c4b26a66d6cea0556b7d6) | **Paul** at Sketchfab | CC BY |
 | ![](basicsky/basicsky.png) | `basicsky` | [_Basic Sky_](https://sketchfab.com/3d-models/free-skybox-basic-sky-b2a4fd1b92c248abaae31975c9ea79e2) | **Paul** at Sketchfab | CC BY |
 | ![](bcnrooftop/bcnrooftop.png) | `bcnrooftop` | [_Barcelona Rooftops_](https://sketchfab.com/3d-models/sky-pano-barcelona-rooftops-0f836cdac86441ec93593620c71ec3d6) | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
 | ![](nightforest/nightforest.png) | `nightforest` | [_Night Forest With Aurora Sky_](https://sketchfab.com/3d-models/sky-box-8k-night-forest-scene-with-aurora-sky-a626c2f3eda14177b07f9c345a17df60) | **Architecture_Interior** at Sketchfab | CC BY |
 | ![](pretvillecinema/pretvillecinema.png) | `pretvillecinema` | [_Pretville Cinema_](https://polyhaven.com/a/pretville_cinema) | **D. Savva and J. Guest** at Poly Haven | CC0 |
 | ![](winternight/winternight.png) | `winternight` | [_Winter Night_](https://sketchfab.com/3d-models/free-skybox-winter-night-9cf1663e9a8647b987ce4f439c22ff50) | **Paul** at Sketchfab | CC BY |
-| ![](meadow/meadow.png) | `meadow` | [_Meadow_](https://polyhaven.com/a/meadow_2) | **Sergej Majboroda** at Poly Haven | CC0 |
-| ![](abovetheclouds/abovetheclouds.png) | `abovetheclouds` | [_Above The Clouds_](https://sketchfab.com/3d-models/free-skybox-above-the-clouds-77e196f5089040ffb7b4d32c6a3fc035) | **Paul** at Sketchfab | CC BY |
-| ![](milkyway2020/milkyway2020.png) | `milkyway2020` | [_Milky Way (2020)_](https://svs.gsfc.nasa.gov/3895) | **NASA/Goddard Space Flight Center** |  |
 
 ### Candidates
 
@@ -77,14 +81,10 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 | ![](tychoskymap/tychoskymap.png) | `tychoskymap` | [_Tycho Catalog Skymap_](https://svs.gsfc.nasa.gov/3895) | **NASA/Goddard Space Flight Center** |  |
 | ![](hayloft/hayloft.png) | `hayloft` | [_Hayloft_](https://polyhaven.com/a/hayloft) | **Adrian Kubasa** at Poly Haven | CC0 |
 | ![](dolceaqua/dolceaqua.png) | `dolceaqua` | [Dolceacqua, Impera, Italia](https://www.flickr.com/photos/sitoo/36240831915/) | **Sitoo** at Flickr | CC BY-NC-ND |  
-| ![](japanesegarden/japanesegarden.png) | `japanesegarden` | [Japanese Garden](https://www.flickr.com/photos/vitroids/48868845128/) | **Masakazu Matsumoto** at Flickr | CC BY |  
-| ![](doublearch/doublearch.png) | `doublearch` | [Double Arch](https://www.flickr.com/photos/vitroids/48822338172/) | **Masakazu Matsumoto** at Flickr | CC BY |  
 | ![](notredameparis/notredameparis.png) | `notredameparis` | [ Notre-Dame de Paris](https://www.flickr.com/photos/gadl/403173357/) | **Alexandre Duret-Lutz** at Flickr | CC BY-SA |  
 | ![](gruyeres/gruyeres.png) | `gruyeres` | [Château de Gruyères](https://www.flickr.com/photos/gadl/11210239776/) | **Alexandre Duret-Lutz** at Flickr | CC BY-NC-SA |  
-| ![](ploumanach/ploumanach.png) | `ploumanach` | [Ploumanac'h](https://www.flickr.com/photos/gadl/22026335904/) | **Alexandre Duret-Lutz** at Flickr | CC BY-NC-SA |  
 | ![](ricefields/ricefields.png) | `ricefields` | [Rice Fields of Japan](https://www.flickr.com/photos/heiwa4126/3662789054/) | **heiwa4126** at Flickr | CC BY |  
 | ![](traintracks/traintracks.png) | `traintracks` | [Train Tracks](https://www.flickr.com/photos/eminbiole/36565746090/) | **Eric Minbiole** at Flickr | CC BY-NC |  
-| ![](tullinge/tullinge.png) | `tullinge` | [Tullinge](https://www.flickr.com/photos/simoninns/24120710880/) | **Simon Inns** at Flickr | CC BY | 
 
 
 
