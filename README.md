@@ -68,6 +68,17 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 |    | ID | Title | Author | License |
 | -- | -- | ----- | ------ | ------- |
+| ![](arkongel/arkongel.png) | `arkongel` | [Kleiner Ankogel](https://www.flickr.com/photos/herbraab/53864577512/) | **H. Raab** | CC BY-NC-ND |
+| ![](goatrock/goatrock.png) | `goatrock` | [Goat Rock State Beach](https://www.flickr.com/photos/54144402@N03/49263489461/) | **Bob Dass** | CC BY |
+| ![](infrareddunes/infrareddunes.png) | `infrareddunes` | [Infrared dunes](https://flickr.com/photos/aldo/2632881467/) | **Aldo Hoeben** | CC BY-NC |
+| ![](kinderdijk/kinderdijk.png) | `kinderdijk` | [Kinderdijk](https://flickr.com/photos/aldo/4584265973/) | **Aldo Hoeben** | CC BY-NC | 
+| ![](morningsun/morningsun.png) | `morningsun` | [Morning sun in the trees](https://flickr.com/photos/aldo/2129900916/) | **Aldo Hoeben** | CC BY-NC |
+| ![](myzithres/myzithres.png) | `myzithres` | [Myzithres rocks](https://www.flickr.com/photos/herbraab/53768758722/) | **H. Raab** | CC BY-NC-ND | 
+| ![](navagio/navagio.png) | `navagio` | [Navagio](https://www.flickr.com/photos/herbraab/53760633242/) | **H. Raab** | CC BY-NC-ND | 
+| ![](sauofen/sauofen.png) | `sauofen` | [Kleiner Sauofen](https://www.flickr.com/photos/herbraab/53487123953/) | **H. Raab** | CC BY-NC-ND | 
+| ![](schiermonnikoogsunset/schiermonnikoogsunset.png) | `schiermonnikoogsunset` | [Sunset](https://flickr.com/photos/aldo/2645748198/) | **Aldo Hoeben** | CC BY-NC | 
+| ![](wadakura/wadakura.png) | `wadakura` | [Wadakura fountain park](https://www.flickr.com/photos/heiwa4126/4231022562/) | **heiwa4126** | CC BY |
+| ![](zakynthos/zakynthos.png) | `zakynthos` | [Zakynthos rock cliff](https://www.flickr.com/photos/herbraab/53766860256/) | **H. Raab** | CC BY-NC-ND | 
 | ![](winterforest/winterforest.png) | `winterforest` | [_Winter Forest_](https://sketchfab.com/3d-models/sky-pano-winter-forest-b42c27358ab04e8885ffb2ecf69c352c) | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
 | ![](malibuoverlook/malibuoverlook.png) | `malibuoverlook` | [_Malibu Overlook_](https://sketchfab.com/3d-models/sky-pano-malibu-overlook-8ef3cf8d717d4598a661e41fc2a7097f) | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
 | ![](monumentvalley/monumentvalley.png) | `monumentvalley` | [_Monument Valley Lookout_](https://sketchfab.com/3d-models/sky-pano-monument-valley-lookout-b9ead322f9bd40ec8eb6a2d33908e592) | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
@@ -85,8 +96,6 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 | ![](gruyeres/gruyeres.png) | `gruyeres` | [Château de Gruyères](https://www.flickr.com/photos/gadl/11210239776/) | **Alexandre Duret-Lutz** at Flickr | CC BY-NC-SA |  
 | ![](ricefields/ricefields.png) | `ricefields` | [Rice Fields of Japan](https://www.flickr.com/photos/heiwa4126/3662789054/) | **heiwa4126** at Flickr | CC BY |  
 | ![](traintracks/traintracks.png) | `traintracks` | [Train Tracks](https://www.flickr.com/photos/eminbiole/36565746090/) | **Eric Minbiole** at Flickr | CC BY-NC |  
-
-
 
 ## Testing
 
