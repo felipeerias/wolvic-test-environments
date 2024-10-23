@@ -183,6 +183,102 @@
         "thumbnail": "https://darker.ink/wolvic-test-environments/tullinge/tullinge.png",
         "payload": "https://darker.ink/wolvic-test-environments/tullinge/tullinge.zip",
         "source": "https://www.flickr.com/photos/simoninns/24120710880/"
+      },
+      {
+        "value": "meadow",
+        "title": "Meadow by Sergej Majboroda (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/meadow/meadow.png",
+        "payload": "https://darker.ink/wolvic-test-environments/meadow/meadow.zip"
+      },
+      {
+        "value": "hayloft",
+        "title": "Hayloft by Adrian Kubasa (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/hayloft/hayloft.png",
+        "payload": "https://darker.ink/wolvic-test-environments/hayloft/hayloft.zip"
+      },
+      {
+        "value": "milkyway2020",
+        "title": "Milky Way (2020) by NASA",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/milkyway2020/milkyway2020.png",
+        "payload": "https://darker.ink/wolvic-test-environments/milkyway2020/milkyway2020.zip"
+      },
+      {
+        "value": "winterforest",
+        "title": "Winter Forest by MozillaHubs (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/winterforest/winterforest.png",
+        "payload": "https://darker.ink/wolvic-test-environments/winterforest/winterforest.zip"
+      },
+      {
+        "value": "malibuoverlook",
+        "title": "Malibu Overlook by MozillaHubs (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/malibuoverlook/malibuoverlook.png",
+        "payload": "https://darker.ink/wolvic-test-environments/malibuoverlook/malibuoverlook.zip"
+      },
+      {
+        "value": "monumentvalley",
+        "title": "Monument Valley Lookout by MozillaHubs (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/monumentvalley/monumentvalley.png",
+        "payload": "https://darker.ink/wolvic-test-environments/monumentvalley/monumentvalley.zip"
+      },
+      {
+        "value": "milkyway",
+        "title": "Milkyway by MozillaHubs (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/milkyway/milkyway.png",
+        "payload": "https://darker.ink/wolvic-test-environments/milkyway/milkyway.zip"
+      },
+      {
+        "value": "animesky",
+        "title": "Anime Sky by Paul (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/animesky/animesky.png",
+        "payload": "https://darker.ink/wolvic-test-environments/animesky/animesky.zip"
+      },
+      {
+        "value": "abovetheclouds",
+        "title": "Above The Clouds by Paul (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/abovetheclouds/abovetheclouds.png",
+        "payload": "https://darker.ink/wolvic-test-environments/abovetheclouds/abovetheclouds.zip"
+      },
+      {
+        "value": "snowycabin",
+        "title": "Snowy Cabin by Paul (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/snowycabin/snowycabin.png",
+        "payload": "https://darker.ink/wolvic-test-environments/snowycabin/snowycabin.zip"
+      },
+      {
+        "value": "futuristiccity",
+        "title": "Rooftops Futuristic City by Paul (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/futuristiccity/futuristiccity.png",
+        "payload": "https://darker.ink/wolvic-test-environments/futuristiccity/futuristiccity.zip"
+      },
+      {
+        "value": "fairytalegarden",
+        "title": "Fairytale_Garden by Giimann (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/fairytalegarden/fairytalegarden.png",
+        "payload": "https://darker.ink/wolvic-test-environments/fairytalegarden/fairytalegarden.zip"
+      },
+      {
+        "value": "fantasylandscape3",
+        "title": "Fantasy Landscape 3 by Giimann (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/fantasylandscape3/fantasylandscape3.png",
+        "payload": "https://darker.ink/wolvic-test-environments/fantasylandscape3/fantasylandscape3.zip"
+      },
+      {
+        "value": "lowpolyroom",
+        "title": "Stylized Room by Van_Twinkle (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/lowpolyroom/lowpolyroom.png",
+        "payload": "https://darker.ink/wolvic-test-environments/lowpolyroom/lowpolyroom.zip"
+      },
+      {
+        "value": "tychoskymap",
+        "title": "Tycho Catalog Skymap by NASA/Goddard Space Flight Center",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/tychoskymap/tychoskymap.png",
+        "payload": "https://darker.ink/wolvic-test-environments/tychoskymap/tychoskymap.zip"
+      },
+      {
+        "value": "spring",
+        "title": "(Shipped) Spring",
+        "thumbnail": "https://igalia.github.io/wolvic-3D-environments/spring/spring.png",
+        "payload": "https://igalia.github.io/wolvic-3D-environments/spring/spring.zip"
       }
     ],
     "dictionaries": [
