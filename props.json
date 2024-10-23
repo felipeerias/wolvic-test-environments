@@ -1,7 +1,49 @@
 {
-    "1.6.1": {
-    "whatsNewUrl": "https://wolvic.com/blog/release_1.6",
+    "1.7.0": {
+    "whatsNewUrl": "https://wolvic.com/blog/release_1.7",
     "environments": [
+     {
+        "value": "brooklynholiday",
+        "title": "Brooklyn Holiday Market by Jeremy Seto (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/brooklynholiday/brooklynholiday.png",
+        "payload": "https://darker.ink/wolvic-test-environments/brooklynholiday/brooklynholiday.zip",
+        "source": ""
+      },
+     {
+        "value": "lobos",
+        "title": "Lobos, Fuerteventura by Simon Waldherr (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/lobos/lobos.png",
+        "payload": "https://darker.ink/wolvic-test-environments/lobos/lobos.zip",
+        "source": ""
+      },      
+     {
+        "value": "milkywaylight",
+        "title": "Milky Way at Hurunui by Dirk Pons (CC BY-NC)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/milkywaylight/milkywaylight.png",
+        "payload": "https://darker.ink/wolvic-test-environments/milkywaylight/milkywaylight.zip",
+        "source": "https://www.flickr.com/photos/dirkpons/51419674704/"
+      },
+     {
+        "value": "nostalgiablue",
+        "title": "Colors of Nostalgia (Blue) by Duncan Rawlinson (CC BY-NC)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/nostalgiablue/nostalgiablue.png",
+        "payload": "https://darker.ink/wolvic-test-environments/nostalgiablue/nostalgiablue.zip",
+        "source": "https://www.flickr.com/photos/thelastminute/52426821655/"
+      },
+     {
+        "value": "nostalgiaorange",
+        "title": "Colors of Nostalgia (Orange) by Duncan Rawlinson (CC BY-NC)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/nostalgiaorange/nostalgiaorange.png",
+        "payload": "https://darker.ink/wolvic-test-environments/nostalgiaorange/nostalgiaorange.zip",
+        "source": "https://www.flickr.com/photos/thelastminute/52425863182"
+      },
+     {
+        "value": "taborno",
+        "title": "Punta de taborno by pano_philou (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/taborno/taborno.png",
+        "payload": "https://darker.ink/wolvic-test-environments/taborno/taborno.zip",
+        "source": "https://www.flickr.com/photos/pano_philou/1399119572/"
+      },
       {
         "value": "arkongel",
         "title": "Kleiner Ankogel by H. Raab (CC BY-NC-ND)",
