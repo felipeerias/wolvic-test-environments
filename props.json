@@ -3,18 +3,32 @@
     "whatsNewUrl": "https://wolvic.com/blog/release_1.7",
     "environments": [
      {
+        "value": "kaiwi",
+        "title": "Ka'iwi Coast by Kaleomokuokanalu Chock (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/kaiwi/kaiwi.png",
+        "payload": "https://darker.ink/wolvic-test-environments/kaiwi/kaiwi.zip",
+        "source": "https://www.flickr.com/photos/kanalu/31192933158/"
+      },
+     {
+        "value": "valleyoffire",
+        "title": "Valley of Fire State Park by Bob Cass (CC BY)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/valleyoffire/valleyoffire.png",
+        "payload": "https://darker.ink/wolvic-test-environments/valleyoffire/valleyoffire.zip",
+        "source": "https://www.flickr.com/photos/54144402@N03/31271410664"
+      },
+     {
         "value": "brooklynholiday",
         "title": "Brooklyn Holiday Market by Jeremy Seto (CC BY-NC-SA)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/brooklynholiday/brooklynholiday.png",
         "payload": "https://darker.ink/wolvic-test-environments/brooklynholiday/brooklynholiday.zip",
-        "source": ""
+        "source": "https://www.flickr.com/photos/jamescastle/51747633563/"
       },
      {
         "value": "lobos",
         "title": "Lobos, Fuerteventura by Simon Waldherr (CC BY-NC-SA)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/lobos/lobos.png",
         "payload": "https://darker.ink/wolvic-test-environments/lobos/lobos.zip",
-        "source": ""
+        "source": "https://www.flickr.com/photos/simonwaldherr/51638698181/"
       },      
      {
         "value": "milkywaylight",
@@ -260,7 +274,8 @@
         "value": "fantasylandscape3",
         "title": "Fantasy Landscape 3 by Giimann (CC BY)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/fantasylandscape3/fantasylandscape3.png",
-        "payload": "https://darker.ink/wolvic-test-environments/fantasylandscape3/fantasylandscape3.zip"
+        "payload": "https://darker.ink/wolvic-test-environments/fantasylandscape3/fantasylandscape3.zip",
+        "source": "https://sketchfab.com/3d-models/fantasy-landscape-3-ded6e2bb0cfd4ef785b81fed2178c2fd"
       },
       {
         "value": "lowpolyroom",
