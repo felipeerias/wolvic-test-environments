@@ -50,6 +50,14 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 |    | ID | Title | Author | License |
 | -- | -- | ----- | ------ | ------- |
+| ![](myzithres/myzithres.png) | `myzithres` | [Myzithres rocks](https://www.flickr.com/photos/herbraab/53768758722/) | **H. Raab** | CC BY-NC-ND | 
+| ![](arkongel/arkongel.png) | `arkongel` | [Kleiner Ankogel](https://www.flickr.com/photos/herbraab/53864577512/) | **H. Raab** | CC BY-NC-ND |
+| ![](kaiwi/kaiwi.png) | `kaiwi` | [Ka'iwi Coast](https://www.flickr.com/photos/kanalu/31192933158/) | **Kaleomokuokanalu Chock** | CC BY-NC-SA |
+| ![](valleyoffire/valleyoffire.png) | `valleyoffire` | [Valley of Fire State Park](https://www.flickr.com/photos/54144402@N03/31271410664) | **Bob Cass** | CC BY |
+| ![](lobos/lobos.png) | `lobos` |  [Lobos, Fuerteventura](https://www.flickr.com/photos/simonwaldherr/51638698181/) | **Simon Waldherr** | CC BY-NC-SA |
+| ![](nostalgiablue/nostalgiablue.png) | `nostalgiablue` |  [Colors of Nostalgia (Blue)](https://www.flickr.com/photos/thelastminute/52426821655/) | **Duncan Rawlinson** | CC BY-NC |
+| ![](nostalgiaorange/nostalgiaorange.png) | `nostalgiaorange` |  [Colors of Nostalgia (Orange)](https://www.flickr.com/photos/thelastminute/52425863182) | **Duncan Rawlinson** | CC BY-NC |
+| ![](fantasylandscape3/fantasylandscape3.png) | `fantasylandscape3` |  [Fantasy Landscape 2](source": "https://sketchfab.com/3d-models/fantasy-landscape-3-ded6e2bb0cfd4ef785b81fed2178c2fd) | Giimann | CC BY |
 | ![](goatrock/goatrock.png) | `goatrock` | [Goat Rock State Beach](https://www.flickr.com/photos/54144402@N03/49263489461/) | **Bob Dass** | CC BY |
 | ![](kinderdijk/kinderdijk.png) | `kinderdijk` | [Kinderdijk](https://flickr.com/photos/aldo/4584265973/) | **Aldo Hoeben** | CC BY-NC | 
 | ![](wadakura/wadakura.png) | `wadakura` | [Wadakura fountain park](https://www.flickr.com/photos/heiwa4126/4231022562/) | **heiwa4126** | CC BY |
@@ -72,12 +80,8 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 |    | ID | Title | Author | License |
 | -- | -- | ----- | ------ | ------- |
-| ![](kaiwi/kaiwi.png) | `kaiwi` | [Ka'iwi Coast](https://www.flickr.com/photos/kanalu/31192933158/) | **Kaleomokuokanalu Chock** | CC BY-NC-SA |
-| ![](valleyoffire/valleyoffire.png) | `valleyoffire` | [Valley of Fire State Park](https://www.flickr.com/photos/54144402@N03/31271410664) | **Bob Cass** | CC BY |
-| ![](arkongel/arkongel.png) | `arkongel` | [Kleiner Ankogel](https://www.flickr.com/photos/herbraab/53864577512/) | **H. Raab** | CC BY-NC-ND |
 | ![](infrareddunes/infrareddunes.png) | `infrareddunes` | [Infrared dunes](https://flickr.com/photos/aldo/2632881467/) | **Aldo Hoeben** | CC BY-NC |
 | ![](morningsun/morningsun.png) | `morningsun` | [Morning sun in the trees](https://flickr.com/photos/aldo/2129900916/) | **Aldo Hoeben** | CC BY-NC |
-| ![](myzithres/myzithres.png) | `myzithres` | [Myzithres rocks](https://www.flickr.com/photos/herbraab/53768758722/) | **H. Raab** | CC BY-NC-ND | 
 | ![](navagio/navagio.png) | `navagio` | [Navagio](https://www.flickr.com/photos/herbraab/53760633242/) | **H. Raab** | CC BY-NC-ND | 
 | ![](sauofen/sauofen.png) | `sauofen` | [Kleiner Sauofen](https://www.flickr.com/photos/herbraab/53487123953/) | **H. Raab** | CC BY-NC-ND | 
 | ![](schiermonnikoogsunset/schiermonnikoogsunset.png) | `schiermonnikoogsunset` | [Sunset](https://flickr.com/photos/aldo/2645748198/) | **Aldo Hoeben** | CC BY-NC | 
