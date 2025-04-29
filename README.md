@@ -80,12 +80,11 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 |    | ID | Title | Author | License |
 | -- | -- | ----- | ------ | ------- |
-
-| ![](kingstheatre/kingstheatre.png) | `kingstheatre` | [Kings Theatrejeremy Seto](https://www.flickr.com/photos/jamescastle/29745666664/) | **jeremy Seto** |CC BY-NC-SA |
-| ![](klippenrandweg/klippenrandweg.png) | `klippenrandweg` | [Klippenrandweg_04 by j.nagel](https://www.flickr.com/photos/165401243@N04/45103062855) | **j.nagel** |CC BY-NC |
-| ![](lakeside/lakeside.png) | `lakeside` | [Lakeside Night by](https://polyhaven.com/a/lakeside_night) | **Greg Zaal, Jarod Guest** |CC0 |
-| ![](rogland/rogland.png) | `rogland` | [Rogland Clear Night](https://polyhaven.com/a/rogland_clear_night) | **Greg Zaal** |CC0 |
-| ![](unitedpalace/unitedpalace.png) | `unitedpalace` | [United Palace by](https://www.flickr.com/photos/jamescastle/30358909365/) | **jeremy Seto** |CC BY-NC-SA |
+| ![](kingstheatre/kingstheatre.png) | `kingstheatre` | [_Kings Theatre_](https://www.flickr.com/photos/jamescastle/29745666664/) | **jeremy Seto** | CC BY-NC-SA |
+| ![](klippenrandweg/klippenrandweg.png) | `klippenrandweg` | [_Klippenrandweg_04_](https://www.flickr.com/photos/165401243@N04/45103062855) | **j.nagel** | CC BY-NC |
+| ![](lakeside/lakeside.png) | `lakeside` | [_Lakeside Night_](https://polyhaven.com/a/lakeside_night) | **Greg Zaal, Jarod Guest** | CC0 |
+| ![](rogland/rogland.png) | `rogland` | [_Rogland Clear Night_](https://polyhaven.com/a/rogland_clear_night) | **Greg Zaal** | CC0 |
+| ![](unitedpalace/unitedpalace.png) | `unitedpalace` | [_United Palace_](https://www.flickr.com/photos/jamescastle/30358909365/) | **jeremy Seto** | CC BY-NC-SA |
 | ![](infrareddunes/infrareddunes.png) | `infrareddunes` | [Infrared dunes](https://flickr.com/photos/aldo/2632881467/) | **Aldo Hoeben** | CC BY-NC |
 | ![](morningsun/morningsun.png) | `morningsun` | [Morning sun in the trees](https://flickr.com/photos/aldo/2129900916/) | **Aldo Hoeben** | CC BY-NC |
 | ![](navagio/navagio.png) | `navagio` | [Navagio](https://www.flickr.com/photos/herbraab/53760633242/) | **H. Raab** | CC BY-NC-ND | 
