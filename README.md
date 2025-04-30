@@ -88,7 +88,7 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 |    | ID | Title | Author | License |
 | -- | -- | ----- | ------ | ------- |
-| ![](goldengatehills/goldengatehills.png) | `goldengatehills` | [Golden Gate Hills_](https://polyhaven.com/a/golden_gate_hills) | **Dimitrios Savva, Jarod Guest** | CC0 |
+| ![](goldengatehills/goldengatehills.png) | `goldengatehills` | [_Golden Gate Hills_](https://polyhaven.com/a/golden_gate_hills) | **Dimitrios Savva, Jarod Guest** | CC0 |
 | ![](lilienstein/lilienstein.png) | `lilienstein` | [_Lilienstein_](https://polyhaven.com/a/lilienstein) | **Andreas Mischok** | CC0 |
 | ![](kingstheatre/kingstheatre.png) | `kingstheatre` | [_Kings Theatre_](https://www.flickr.com/photos/jamescastle/29745666664/) | **jeremy Seto** | CC BY-NC-SA |
 | ![](klippenrandweg/klippenrandweg.png) | `klippenrandweg` | [_Klippenrandweg_04_](https://www.flickr.com/photos/165401243@N04/45103062855) | **j.nagel** | CC BY-NC |
