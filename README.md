@@ -43,7 +43,7 @@ for file in *.png; do convert "$file" -colorspace sRGB "${file%.png}_srgb.png"; 
 zip ${ENVNAME}_misc_srgb.zip *_srgb.png
 
 # Thumbnail
-convert posx.png -resize 512x512 -gravity Center -crop 256x256+0+0 ${ENVNAME}.png
+convert negz.png -resize 512x512 -gravity Center -crop 256x256+0+0 ${ENVNAME}.png
 
 # Copy to a new folder in this project
 mkdir ../wolvic-test-environments/${ENVNAME}
@@ -88,6 +88,8 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 |    | ID | Title | Author | License |
 | -- | -- | ----- | ------ | ------- |
+| ![](goldengatehills/goldengatehills.png) | `goldengatehills` | [Golden Gate Hills_](https://polyhaven.com/a/golden_gate_hills) | **Dimitrios Savva, Jarod Guest** | CC0 |
+| ![](lilienstein/lilienstein.png) | `lilienstein` | [_Lilienstein_](https://polyhaven.com/a/lilienstein) | **Andreas Mischok** | CC0 |
 | ![](kingstheatre/kingstheatre.png) | `kingstheatre` | [_Kings Theatre_](https://www.flickr.com/photos/jamescastle/29745666664/) | **jeremy Seto** | CC BY-NC-SA |
 | ![](klippenrandweg/klippenrandweg.png) | `klippenrandweg` | [_Klippenrandweg_04_](https://www.flickr.com/photos/165401243@N04/45103062855) | **j.nagel** | CC BY-NC |
 | ![](lakeside/lakeside.png) | `lakeside` | [_Lakeside Night_](https://polyhaven.com/a/lakeside_night) | **Greg Zaal, Jarod Guest** | CC0 |

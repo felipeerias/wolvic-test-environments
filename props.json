@@ -3,6 +3,20 @@
     "whatsNewUrl": "https://wolvic.com/blog/release_1.7",
     "environments": [
      {
+         "value": "goldengatehills",
+         "title": "Golden Gate Hills by Dimitrios Savva, Jarod Guest (CC0)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/goldengatehills/goldengatehills.png",
+         "payload": "https://darker.ink/wolvic-test-environments/goldengatehills/goldengatehills.zip",
+         "source": "https://polyhaven.com/a/golden_gate_hills"
+     },
+     {
+         "value": "lilienstein",
+         "title": "Lilienstein by Andreas Mischok (CC0)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/lilienstein/lilienstein.png",
+         "payload": "https://darker.ink/wolvic-test-environments/lilienstein/lilienstein.zip",
+         "source": "https://polyhaven.com/a/lilienstein"
+     },
+     {
          "value": "kingstheatre",
          "title": "Kings Theatre by jeremy Seto (CC BY-NC-SA)",
          "thumbnail": "https://darker.ink/wolvic-test-environments/kingstheatre/kingstheatre.png",
