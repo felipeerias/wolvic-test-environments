@@ -44,21 +44,21 @@
         "title": "Ladinger Spitz by H. Raab (CC BY-NC-ND)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/ladinger/ladinger.png",
         "payload": "https://darker.ink/wolvic-test-environments/ladinger/ladinger.zip",
-        "source": "https://example.com/ladinger"
+        "source": "https://www.flickr.com/photos/herbraab/51801067527/"
       },
       {
         "value": "nebula",
         "title": "Nebula by Jungle Jim (CC-BY)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/nebula/nebula.png",
         "payload": "https://darker.ink/wolvic-test-environments/nebula/nebula.zip",
-        "source": "https://example.com/nebula"
+        "source": "https://sketchfab.com/3d-models/nebula-skybox-16k-0d1e380993a842e6a0111f09c5cb6bdc"
       },
       {
         "value": "stadlersee",
         "title": "Stadlersee by Bau-3d.ch (CC-BY)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/stadlersee/stadlersee.png",
         "payload": "https://darker.ink/wolvic-test-environments/stadlersee/stadlersee.zip",
-        "source": "https://example.com/stadlersee"
+        "source": "https://sketchfab.com/3d-models/nebula-skybox-16k-0d1e380993a842e6a0111f09c5cb6bdc"
       },
       {
         "value": "kingstheatre",

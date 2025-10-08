@@ -97,9 +97,9 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 | ![](dieslingsee/dieslingsee.png) | `dieslingsee` | [Dieslingsee](https://www.flickr.com/photos/herbraab/51277133151/) | **H. Raab** | CC BY-NC-ND |
 | ![](eveningroad/eveningroad.png) | `eveningroad` | [Rural Evening Road](https://polyhaven.com/a/rural_evening_road) | **Alexander Scholten** | CC0 |
 | ![](gschoess/gschoess.png) | `gschoess` | [Gschlößtal](https://www.flickr.com/photos/herbraab/54628298972/) | **H. Raab** | CC BY-NC-ND |
-| ![](ladinger/ladinger.png) | `ladinger` | [Ladinger Spitz](https://example.com/ladinger) | **H. Raab** | CC BY-NC-ND |
-| ![](nebula/nebula.png) | `nebula` | [Nebula](https://example.com/nebula) | **Jungle Jim** | CC-BY |
-| ![](stadlersee/stadlersee.png) | `stadlersee` | [Stadlersee](https://example.com/stadlersee) | **Bau-3d.ch** | CC-BY |
+| ![](ladinger/ladinger.png) | `ladinger` | [Ladinger Spitz](https://www.flickr.com/photos/herbraab/51801067527/) | **H. Raab** | CC BY-NC-ND |
+| ![](nebula/nebula.png) | `nebula` | [Nebula](https://sketchfab.com/3d-models/nebula-skybox-16k-0d1e380993a842e6a0111f09c5cb6bdc) | **Jungle Jim** | CC-BY |
+| ![](stadlersee/stadlersee.png) | `stadlersee` | [Stadlersee](https://sketchfab.com/3d-models/nebula-skybox-16k-0d1e380993a842e6a0111f09c5cb6bdc) | **Bau-3d.ch** | CC-BY |
 | ![](kingstheatre/kingstheatre.png) | `kingstheatre` | [_Kings Theatre_](https://www.flickr.com/photos/jamescastle/29745666664/) | **jeremy Seto** | CC BY-NC-SA |
 | ![](klippenrandweg/klippenrandweg.png) | `klippenrandweg` | [_Klippenrandweg_04_](https://www.flickr.com/photos/165401243@N04/45103062855) | **j.nagel** | CC BY-NC |
 | ![](rogland/rogland.png) | `rogland` | [_Rogland Clear Night_](https://polyhaven.com/a/rogland_clear_night) | **Greg Zaal** | CC0 |
