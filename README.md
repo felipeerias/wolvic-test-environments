@@ -92,6 +92,14 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 |    | ID | Title | Author | License |
 | -- | -- | ----- | ------ | ------- |
+| ![](aliencave/aliencave.png) | `aliencave` | [Cave on an alien planet](https://sketchfab.com/3d-models/cave-on-an-alien-planet-skybox-25aebeb12d8b481190bef3e86c3c2ddf) | **Jungle Jim** | CC-BY |
+| ![](alienlandscape/alienlandscape.png) | `alienlandscape` | [Lush alien landscape](https://sketchfab.com/3d-models/lush-alien-landscape-skybox-7c2260faca5d473d9ccbe44319c73551) | **Jungle Jim** | CC-BY |
+| ![](dieslingsee/dieslingsee.png) | `dieslingsee` | [Dieslingsee](https://www.flickr.com/photos/herbraab/51277133151/) | **H. Raab** | CC BY-NC-ND |
+| ![](eveningroad/eveningroad.png) | `eveningroad` | [Rural Evening Road](https://polyhaven.com/a/rural_evening_road) | **Alexander Scholten** | CC0 |
+| ![](gschoess/gschoess.png) | `gschoess` | [Gschlößtal](https://www.flickr.com/photos/herbraab/54628298972/) | **H. Raab** | CC BY-NC-ND |
+| ![](ladinger/ladinger.png) | `ladinger` | [Ladinger Spitz](https://example.com/ladinger) | **H. Raab** | CC BY-NC-ND |
+| ![](nebula/nebula.png) | `nebula` | [Nebula](https://example.com/nebula) | **Jungle Jim** | CC-BY |
+| ![](stadlersee/stadlersee.png) | `stadlersee` | [Stadlersee](https://example.com/stadlersee) | **Bau-3d.ch** | CC-BY |
 | ![](kingstheatre/kingstheatre.png) | `kingstheatre` | [_Kings Theatre_](https://www.flickr.com/photos/jamescastle/29745666664/) | **jeremy Seto** | CC BY-NC-SA |
 | ![](klippenrandweg/klippenrandweg.png) | `klippenrandweg` | [_Klippenrandweg_04_](https://www.flickr.com/photos/165401243@N04/45103062855) | **j.nagel** | CC BY-NC |
 | ![](rogland/rogland.png) | `rogland` | [_Rogland Clear Night_](https://polyhaven.com/a/rogland_clear_night) | **Greg Zaal** | CC0 |
