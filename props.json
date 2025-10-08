@@ -2,36 +2,91 @@
   "1.7.0":
   {
     "whatsNewUrl": "https://wolvic.com/blog/release_1.7",
-    "environments":
-    [
-      {
-        "value": "kingstheatre",
-        "title": "Kings Theatre by jeremy Seto (CC BY-NC-SA)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/kingstheatre/kingstheatre.png",
-        "payload": "https://darker.ink/wolvic-test-environments/kingstheatre/kingstheatre.zip",
-        "source": "https://www.flickr.com/photos/jamescastle/29745666664/"
-      },
-      {
-        "value": "klippenrandweg",
-        "title": "Klippenrandweg_04 by j.nagel (CC BY-NC)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/klippenrandweg/klippenrandweg.png",
-        "payload": "https://darker.ink/wolvic-test-environments/klippenrandweg/klippenrandweg.zip",
-        "source": "https://www.flickr.com/photos/165401243@N04/45103062855"
-      },
-      {
-        "value": "rogland",
-        "title": "Rogland Clear Night by Greg Zaal (CC0)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/rogland/rogland.png",
-        "payload": "https://darker.ink/wolvic-test-environments/rogland/rogland.zip",
-        "source": "https://polyhaven.com/a/rogland_clear_night"
-      },
-      {
-        "value": "unitedpalace",
-        "title": "United Palace by jeremy Seto (CC BY-NC-SA)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/unitedpalace/unitedpalace.png",
-        "payload": "https://darker.ink/wolvic-test-environments/unitedpalace/unitedpalace.zip",
-        "source": "https://www.flickr.com/photos/jamescastle/30358909365/"
-      },
+    "environments": [
+     {
+         "value": "aliencave",
+         "title": "on an alien planet by Jungle Jim (CC-BY)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/aliencave/aliencave.png",
+         "payload": "https://darker.ink/wolvic-test-environments/aliencave/aliencave.zip",
+         "source": "https://sketchfab.com/3d-models/cave-on-an-alien-planet-skybox-25aebeb12d8b481190bef3e86c3c2ddf"
+     },
+     {
+         "value": "alienlandscape",
+         "title": "Lush alien landscape by Jungle Jim (CC-BY)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/alienlandscape/alienlandscape.png",
+         "payload": "https://darker.ink/wolvic-test-environments/alienlandscape/alienlandscape.zip",
+         "source": "https://sketchfab.com/3d-models/lush-alien-landscape-skybox-7c2260faca5d473d9ccbe44319c73551"
+     },
+     {
+         "value": "dieslingsee",
+         "title": "Dieslingsee by H. Raab (CC BY-NC-ND)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/dieslingsee/dieslingsee.png",
+         "payload": "https://darker.ink/wolvic-test-environments/dieslingsee/dieslingsee.zip",
+         "source": "https://www.flickr.com/photos/herbraab/51277133151/"
+     },
+     {
+         "value": "eveningroad",
+         "title": "Rural Evening Road by Alexander Scholten (CC0)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/eveningroad/eveningroad.png",
+         "payload": "https://darker.ink/wolvic-test-environments/eveningroad/eveningroad.zip",
+         "source": "https://polyhaven.com/a/rural_evening_road"
+     },
+     {
+         "value": "gschoess",
+         "title": "Gschlößtal by H. Raab (CC BY-NC-ND)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/gschoess/gschoess.png",
+         "payload": "https://darker.ink/wolvic-test-environments/gschoess/gschoess.zip",
+         "source": "https://www.flickr.com/photos/herbraab/54628298972/"
+     },
+     {
+         "value": "ladinger",
+         "title": "Ladinger Spitz by H. Raab (CC BY-NC-ND)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/ladinger/ladinger.png",
+         "payload": "https://darker.ink/wolvic-test-environments/ladinger/ladinger.zip",
+         "source": "https://example.com/ladinger"
+     },
+     {
+         "value": "nebula",
+         "title": "Nebula by Jungle Jim (CC-BY)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/nebula/nebula.png",
+         "payload": "https://darker.ink/wolvic-test-environments/nebula/nebula.zip",
+         "source": "https://example.com/nebula"
+     },
+     {
+         "value": "stadlersee",
+         "title": "Stadlersee by Bau-3d.ch (CC-BY)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/stadlersee/stadlersee.png",
+         "payload": "https://darker.ink/wolvic-test-environments/stadlersee/stadlersee.zip",
+         "source": "https://example.com/stadlersee"
+     },
+     {
+         "value": "kingstheatre",
+         "title": "Kings Theatre by jeremy Seto (CC BY-NC-SA)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/kingstheatre/kingstheatre.png",
+         "payload": "https://darker.ink/wolvic-test-environments/kingstheatre/kingstheatre.zip",
+         "source": "https://www.flickr.com/photos/jamescastle/29745666664/"
+     },
+     {
+         "value": "klippenrandweg",
+         "title": "Klippenrandweg_04 by j.nagel (CC BY-NC)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/klippenrandweg/klippenrandweg.png",
+         "payload": "https://darker.ink/wolvic-test-environments/klippenrandweg/klippenrandweg.zip",
+         "source": "https://www.flickr.com/photos/165401243@N04/45103062855"
+     },
+     {
+         "value": "rogland",
+         "title": "Rogland Clear Night by Greg Zaal (CC0)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/rogland/rogland.png",
+         "payload": "https://darker.ink/wolvic-test-environments/rogland/rogland.zip",
+         "source": "https://polyhaven.com/a/rogland_clear_night"
+     },
+     {
+         "value": "unitedpalace",
+         "title": "United Palace by jeremy Seto (CC BY-NC-SA)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/unitedpalace/unitedpalace.png",
+         "payload": "https://darker.ink/wolvic-test-environments/unitedpalace/unitedpalace.zip",
+         "source": "https://www.flickr.com/photos/jamescastle/30358909365/"
+     },
       {
         "value": "infrareddunes",
         "title": "Infrared dunes by Aldo Hoeben (CC BY-NC)",
@@ -168,84 +223,85 @@
         "payload": "https://darker.ink/wolvic-test-environments/traintracks/traintracks.zip",
         "source": "https://www.flickr.com/photos/eminbiole/36565746090/"
       },
+
+
       {
-        "value": "lilienstein",
-        "title": "Lilienstein by Andreas Mischok (CC0)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/lilienstein/lilienstein.png",
-        "payload": "https://darker.ink/wolvic-test-environments/lilienstein/lilienstein.zip",
-        "source": "https://polyhaven.com/a/lilienstein"
-      },
-      {
-        "value": "goldengatehills",
-        "title": "Golden Gate Hills by Dimitrios Savva, Jarod Guest (CC0)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/goldengatehills/goldengatehills.png",
-        "payload": "https://darker.ink/wolvic-test-environments/goldengatehills/goldengatehills.zip",
-        "source": "https://polyhaven.com/a/golden_gate_hills"
-      },
-      {
-        "value": "navagio",
-        "title": "Navagio by H. Raab (CC BY-NC-ND)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/navagio/navagio.png",
-        "payload": "https://darker.ink/wolvic-test-environments/navagio/navagio.zip",
-        "source": "https://www.flickr.com/photos/herbraab/53760633242/"
-      },
-      {
-        "value": "lakeside",
-        "title": "Lakeside Night by Greg Zaal, Jarod Guest (CC0)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/lakeside/lakeside.png",
-        "payload": "https://darker.ink/wolvic-test-environments/lakeside/lakeside.zip",
-        "source": "https://polyhaven.com/a/lakeside_night"
-      },
-      {
+        "value": "spring",
+        "title": "(Shipped) Spring",
+        "thumbnail": "https://igalia.github.io/wolvic-3D-environments/spring/spring.png",
+        "payload": "https://igalia.github.io/wolvic-3D-environments/spring/spring.zip"
+      }
+     {
+         "value": "goldengatehills",
+         "title": "Golden Gate Hills by Dimitrios Savva, Jarod Guest (CC0)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/goldengatehills/goldengatehills.png",
+         "payload": "https://darker.ink/wolvic-test-environments/goldengatehills/goldengatehills.zip",
+         "source": "https://polyhaven.com/a/golden_gate_hills"
+     },
+     {
+         "value": "lilienstein",
+         "title": "Lilienstein by Andreas Mischok (CC0)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/lilienstein/lilienstein.png",
+         "payload": "https://darker.ink/wolvic-test-environments/lilienstein/lilienstein.zip",
+         "source": "https://polyhaven.com/a/lilienstein"
+     },
+     {
+         "value": "lakeside",
+         "title": "Lakeside Night by Greg Zaal, Jarod Guest (CC0)",
+         "thumbnail": "https://darker.ink/wolvic-test-environments/lakeside/lakeside.png",
+         "payload": "https://darker.ink/wolvic-test-environments/lakeside/lakeside.zip",
+         "source": "https://polyhaven.com/a/lakeside_night"
+     },
+     {
         "value": "kaiwi",
         "title": "Ka'iwi Coast by Kaleomokuokanalu Chock (CC BY-NC-SA)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/kaiwi/kaiwi.png",
         "payload": "https://darker.ink/wolvic-test-environments/kaiwi/kaiwi.zip",
         "source": "https://www.flickr.com/photos/kanalu/31192933158/"
       },
-      {
+     {
         "value": "valleyoffire",
         "title": "Valley of Fire State Park by Bob Cass (CC BY)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/valleyoffire/valleyoffire.png",
         "payload": "https://darker.ink/wolvic-test-environments/valleyoffire/valleyoffire.zip",
         "source": "https://www.flickr.com/photos/54144402@N03/31271410664"
       },
-      {
+     {
         "value": "brooklynholiday",
         "title": "Brooklyn Holiday Market by Jeremy Seto (CC BY-NC-SA)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/brooklynholiday/brooklynholiday.png",
         "payload": "https://darker.ink/wolvic-test-environments/brooklynholiday/brooklynholiday.zip",
         "source": "https://www.flickr.com/photos/jamescastle/51747633563/"
       },
-      {
+     {
         "value": "lobos",
         "title": "Lobos, Fuerteventura by Simon Waldherr (CC BY-NC-SA)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/lobos/lobos.png",
         "payload": "https://darker.ink/wolvic-test-environments/lobos/lobos.zip",
         "source": "https://www.flickr.com/photos/simonwaldherr/51638698181/"
-      },
-      {
+      },      
+     {
         "value": "milkywaylight",
         "title": "Milky Way at Hurunui by Dirk Pons (CC BY-NC)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/milkywaylight/milkywaylight.png",
         "payload": "https://darker.ink/wolvic-test-environments/milkywaylight/milkywaylight.zip",
         "source": "https://www.flickr.com/photos/dirkpons/51419674704/"
       },
-      {
+     {
         "value": "nostalgiablue",
         "title": "Colors of Nostalgia (Blue) by Duncan Rawlinson (CC BY-NC)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/nostalgiablue/nostalgiablue.png",
         "payload": "https://darker.ink/wolvic-test-environments/nostalgiablue/nostalgiablue.zip",
         "source": "https://www.flickr.com/photos/thelastminute/52426821655/"
       },
-      {
+     {
         "value": "nostalgiaorange",
         "title": "Colors of Nostalgia (Orange) by Duncan Rawlinson (CC BY-NC)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/nostalgiaorange/nostalgiaorange.png",
         "payload": "https://darker.ink/wolvic-test-environments/nostalgiaorange/nostalgiaorange.zip",
         "source": "https://www.flickr.com/photos/thelastminute/52425863182"
       },
-      {
+     {
         "value": "taborno",
         "title": "Punta de taborno by pano_philou (CC BY-NC-SA)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/taborno/taborno.png",
@@ -253,18 +309,25 @@
         "source": "https://www.flickr.com/photos/pano_philou/1399119572/"
       },
       {
-        "value": "arkongel",
-        "title": "Kleiner Ankogel by H. Raab (CC BY-NC-ND)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/arkongel/arkongel.png",
-        "payload": "https://darker.ink/wolvic-test-environments/arkongel/arkongel.zip",
-        "source": "https://www.flickr.com/photos/herbraab/53864577512/"
+        "value": "klippenrandweg",
+        "title": "Klippenrandweg_04 by j.nagel (CC BY-NC)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/klippenrandweg/klippenrandweg.png",
+        "payload": "https://darker.ink/wolvic-test-environments/klippenrandweg/klippenrandweg.zip",
+        "source": "https://www.flickr.com/photos/165401243@N04/45103062855"
       },
       {
-        "value": "goatrock",
-        "title": "Goat Rock State Beach by Bob Dass(CC BY)",
-        "thumbnail": "https://darker.ink/wolvic-test-environments/goatrock/goatrock.png",
-        "payload": "https://darker.ink/wolvic-test-environments/goatrock/goatrock.zip",
-        "source": "https://www.flickr.com/photos/54144402@N03/49263489461/"
+        "value": "rogland",
+        "title": "Rogland Clear Night by Greg Zaal (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/rogland/rogland.png",
+        "payload": "https://darker.ink/wolvic-test-environments/rogland/rogland.zip",
+        "source": "https://polyhaven.com/a/rogland_clear_night"
+      },
+      {
+        "value": "unitedpalace",
+        "title": "United Palace by jeremy Seto (CC BY-NC-SA)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/unitedpalace/unitedpalace.png",
+        "payload": "https://darker.ink/wolvic-test-environments/unitedpalace/unitedpalace.zip",
+        "source": "https://www.flickr.com/photos/jamescastle/30358909365/"
       },
       {
         "value": "kinderdijk",
@@ -279,6 +342,13 @@
         "thumbnail": "https://darker.ink/wolvic-test-environments/myzithres/myzithres.png",
         "payload": "https://darker.ink/wolvic-test-environments/myzithres/myzithres.zip",
         "source": "https://www.flickr.com/photos/herbraab/53768758722/"
+      },
+      {
+        "value": "navagio",
+        "title": "Navagio by H. Raab (CC BY-NC-ND)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/navagio/navagio.png",
+        "payload": "https://darker.ink/wolvic-test-environments/navagio/navagio.zip",
+        "source": "https://www.flickr.com/photos/herbraab/53760633242/"
       },
       {
         "value": "wadakura",
@@ -339,12 +409,6 @@
         "title": "Above The Clouds by Paul (CC BY)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/abovetheclouds/abovetheclouds.png",
         "payload": "https://darker.ink/wolvic-test-environments/abovetheclouds/abovetheclouds.zip"
-      },
-      {
-        "value": "spring",
-        "title": "(Shipped) Spring",
-        "thumbnail": "https://igalia.github.io/wolvic-3D-environments/spring/spring.png",
-        "payload": "https://igalia.github.io/wolvic-3D-environments/spring/spring.zip"
       }
     ],
     "dictionaries":
