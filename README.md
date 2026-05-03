@@ -96,6 +96,9 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 |    | ID | Title | Author | License |
 | -- | -- | ----- | ------ | ------- |
+| ![](ahlbeck/ahlbeck.png) | `ahlbeck` | [Ahlbeck Seebrücke](https://www.flickr.com/photos/165401243@N04/54803640421/") |  **j.nagel** | Public Domain |
+| ![](belltower/belltower.png) | `belltower` | [Bell Tower](https://polyhaven.com/a/bell_tower") | **Dario Barresi** | CC0 |
+| ![](pergola/pergola.png) | `pergola` | [Pergola Walkway](https://polyhaven.com/a/pergola_walkway") | **Dario Barresi** | CC0 |
 | ![](aliencave/aliencave.png) | `aliencave` | [Cave on an alien planet](https://sketchfab.com/3d-models/cave-on-an-alien-planet-skybox-25aebeb12d8b481190bef3e86c3c2ddf) | **Jungle Jim** | CC-BY |
 | ![](alienlandscape/alienlandscape.png) | `alienlandscape` | [Lush alien landscape](https://sketchfab.com/3d-models/lush-alien-landscape-skybox-7c2260faca5d473d9ccbe44319c73551) | **Jungle Jim** | CC-BY |
 | ![](dieslingsee/dieslingsee.png) | `dieslingsee` | [Dieslingsee](https://www.flickr.com/photos/herbraab/51277133151/) | **H. Raab** | CC BY-NC-ND |
