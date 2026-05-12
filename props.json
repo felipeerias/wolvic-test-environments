@@ -5,6 +5,41 @@
     "environments":
     [
       {
+        "value": "cannon",
+        "title": "Cannon by Greg Zaal (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/cannon/cannon.png",
+        "payload": "https://darker.ink/wolvic-test-environments/cannon/cannon.zip",
+        "source": "https://polyhaven.com/a/cannon"
+      },
+      {
+        "value": "dikhololonight",
+        "title": "Dikhololo Night by Greg Zaal (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/dikhololonight/dikhololonight.png",
+        "payload": "https://darker.ink/wolvic-test-environments/dikhololonight/dikhololonight.zip",
+        "source": "https://polyhaven.com/a/dikhololo_night"
+      },
+      {
+        "value": "goegap",
+        "title": "Goegap by Greg Zaal (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/goegap/goegap.png",
+        "payload": "https://darker.ink/wolvic-test-environments/goegap/goegap.zip",
+        "source": "https://polyhaven.com/a/goegap"
+      },
+      {
+        "value": "hillyterrain",
+        "title": "Hilly Terrain 01 by Sergej Majboroda (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/hillyterrain/hillyterrain.png",
+        "payload": "https://darker.ink/wolvic-test-environments/hillyterrain/hillyterrain.zip",
+        "source": "https://polyhaven.com/a/hilly_terrain_01"
+      },
+      {
+        "value": "moonlessgolf",
+        "title": "Moonless Golf by Greg Zaal (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/moonlessgolf/moonlessgolf.png",
+        "payload": "https://darker.ink/wolvic-test-environments/moonlessgolf/moonlessgolf.zip",
+        "source": "https://polyhaven.com/a/moonless_golf"
+      },
+      {
         "value": "ahlbeck",
         "title": "Ahlbeck Seebrücke by j.nagel (Public Domain)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/ahlbeck/ahlbeck.png",
