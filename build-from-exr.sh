@@ -37,12 +37,12 @@
 #   5. mipgen encodes ETC2 KTX (linear and sRGB).
 #   6. Five zips + thumbnail copied into ./ENV_NAME/.
 #
-# Cube face mapping: the c3x2 "front" tile is uploaded as NEG_Z (and "back"
-# as POS_Z) so the user, looking in the default forward direction in VR,
-# sees the panorama's center view. Wolvic's skybox geometry negates both
-# vertex positions and UVs (Skybox.cpp), which inverts cubemap sampling:
-# world −Z view samples NEG_Z face. Without this swap the user faces away
-# from the panorama center and the scene reads as horizontally mirrored.
+# Orientation: v360 `yaw=180` rotates the entire output cube 180° around Y
+# before extraction, so the user — who otherwise defaults to facing the
+# panorama's back due to Wolvic's skybox geometry conventions — ends up
+# facing the panorama center. Rotating the whole cube (vs. swapping
+# individual face files) keeps the 6 faces internally consistent so they
+# tile without seams.
 #
 # Output face size is 1024 to match the layer allocation in
 # wolvic/app/src/main/cpp/BrowserWorld.cpp (size = 1024).
@@ -106,7 +106,7 @@ zscale=t=linear:p=bt2020:m=bt2020nc,\
 tonemap=mobius:desat=0,\
 zscale=t=iec61966-2-1:p=bt709:m=bt709,\
 format=rgb24,\
-v360=e:c3x2:w=${STRIP_W}:h=${STRIP_H}:interp=lanczos" \
+v360=e:c3x2:w=${STRIP_W}:h=${STRIP_H}:interp=lanczos:yaw=180" \
     -frames:v 1 -update 1 "$STRIP"
 
 # Step 3: crop strip into 6 face files.
@@ -117,12 +117,12 @@ echo "==> cropping cube faces"
 cd "$WORK_DIR"
 E=$EDGE_HIGH
 E2=$((E * 2))
-convert "$STRIP" -crop "${E}x${E}+0+0"        +repage posx_full.png  # right → +X
-convert "$STRIP" -crop "${E}x${E}+${E}+0"     +repage negx_full.png  # left  → −X
-convert "$STRIP" -crop "${E}x${E}+${E2}+0"    +repage posy_full.png  # up    → +Y
-convert "$STRIP" -crop "${E}x${E}+0+${E}"     +repage negy_full.png  # down  → −Y
-convert "$STRIP" -crop "${E}x${E}+${E}+${E}"  +repage negz_full.png  # front → −Z (user looks forward, samples NEG_Z)
-convert "$STRIP" -crop "${E}x${E}+${E2}+${E}" +repage posz_full.png  # back  → +Z (user looks backward)
+convert "$STRIP" -crop "${E}x${E}+0+0"        +repage posx_full.png  # right
+convert "$STRIP" -crop "${E}x${E}+${E}+0"     +repage negx_full.png  # left
+convert "$STRIP" -crop "${E}x${E}+${E2}+0"    +repage posy_full.png  # up
+convert "$STRIP" -crop "${E}x${E}+0+${E}"     +repage negy_full.png  # down
+convert "$STRIP" -crop "${E}x${E}+${E}+${E}"  +repage posz_full.png  # front
+convert "$STRIP" -crop "${E}x${E}+${E2}+${E}" +repage negz_full.png  # back
 rm -f "$STRIP"
 
 # Step 4: Lanczos downscale + gentle unsharp.
