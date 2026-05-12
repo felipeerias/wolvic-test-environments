@@ -5,6 +5,27 @@
     "environments":
     [
       {
+        "value": "ahlbeck",
+        "title": "Ahlbeck Seebrücke by j.nagel (Public Domain)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/ahlbeck/ahlbeck.png",
+        "payload": "https://darker.ink/wolvic-test-environments/ahlbeck/ahlbeck.zip",
+        "source": "https://www.flickr.com/photos/165401243@N04/54803640421/"
+      },
+      {
+        "value": "belltower",
+        "title": "Bell Tower by Dario Barresi (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/belltower/belltower.png",
+        "payload": "https://darker.ink/wolvic-test-environments/belltower/belltower.zip",
+        "source": "https://polyhaven.com/a/bell_tower"
+      },
+      {
+        "value": "pergola",
+        "title": "Pergola Walkway Dario Barresi (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/pergola/pergola.png",
+        "payload": "https://darker.ink/wolvic-test-environments/pergola/pergola.zip",
+        "source": "https://polyhaven.com/a/pergola_walkway"
+      },
+      {
         "value": "aliencave",
         "title": "Cave on an alien planet by Jungle Jim (CC-BY)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/aliencave/aliencave.png",
