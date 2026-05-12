@@ -4,7 +4,14 @@
 # Outputs into ./ENV_NAME/ following the layout expected by props.json.
 #
 # Usage:
-#   build-from-exr.sh ENV_NAME SOURCE.exr
+#   build-from-exr.sh ENV_NAME SOURCE.exr [EV]
+#
+# EV is the exposure compensation in stops applied before tonemap (default 1.0).
+# PolyHaven HDRIs ship raw linear data with very high dynamic range, so an
+# exposure boost is typically needed to match their web preview look.
+# Typical values:
+#   1.0  — daytime scenes (most cases)
+#   0.0  — night / twilight scenes (preserves the dark mood)
 #
 # Recommended source: 8K EXR from polyhaven.com (or similar). 16K works but
 # adds processing time with no visible gain at 1024² output. Avoid 4K and
@@ -19,13 +26,23 @@
 #   $ENV_NAME_misc_srgb.zip  — uncompressed PNG sRGB (Quest after v69)
 #
 # Pipeline:
-#   1. ffmpeg tonemap=hable converts HDR linear → sRGB LDR (single pass over
-#      the equirectangular so dynamic-range mapping is consistent across faces).
+#   1. ffmpeg pre-multiplies linear values by 2^EV (exposure compensation),
+#      then tonemap=mobius converts HDR linear → sRGB LDR. Single pass over
+#      the equirectangular so the dynamic-range mapping is consistent across
+#      faces. Mobius has gentle highlight/shadow rolloff — preserves the
+#      moody feel of overcast/night scenes that hable would crush flat.
 #   2. ffmpeg v360 projects equirectangular → 6 cube faces at 2048² (Lanczos).
 #   3. ImageMagick crops the 3x2 strip into 6 face PNGs.
 #   4. Lanczos-downscale to 1024² + gentle unsharp pass.
 #   5. mipgen encodes ETC2 KTX (linear and sRGB).
 #   6. Five zips + thumbnail copied into ./ENV_NAME/.
+#
+# Cube face mapping: the c3x2 "front" tile is uploaded as NEG_Z (and "back"
+# as POS_Z) so the user, looking in the default forward direction in VR,
+# sees the panorama's center view. Wolvic's skybox geometry negates both
+# vertex positions and UVs (Skybox.cpp), which inverts cubemap sampling:
+# world −Z view samples NEG_Z face. Without this swap the user faces away
+# from the panorama center and the scene reads as horizontally mirrored.
 #
 # Output face size is 1024 to match the layer allocation in
 # wolvic/app/src/main/cpp/BrowserWorld.cpp (size = 1024).
@@ -34,15 +51,21 @@
 
 set -euo pipefail
 
-if [[ $# -ne 2 ]]; then
-    print -u2 "Usage: $0 ENV_NAME SOURCE.exr"
+if [[ $# -lt 2 || $# -gt 3 ]]; then
+    print -u2 "Usage: $0 ENV_NAME SOURCE.exr [EV]"
     print -u2 ""
-    print -u2 "Example: $0 pergola ~/Downloads/pergola_walkway_8k.exr"
+    print -u2 "EV: exposure compensation in stops (default 1.0)"
+    print -u2 "    1.0 for daytime scenes, 0.0 for night/twilight scenes."
+    print -u2 ""
+    print -u2 "Example: $0 goegap ~/Downloads/goegap_8k.exr 1.0"
+    print -u2 "Example: $0 moonless_golf ~/Downloads/moonless_golf_8k.exr 0"
     exit 1
 fi
 
 ENV_NAME="$1"
 SRC="$(realpath "$2")"
+EV="${3:-1.0}"
+EV_MULT=$(python3 -c "print(2 ** $EV)")
 
 if [[ "${SRC:l}" != *.exr ]]; then
     print -u2 "Error: input must be a .exr file (got: $SRC)"
@@ -65,18 +88,22 @@ mkdir -p "$OUT_DIR"
 echo "==> Building '$ENV_NAME'"
 echo "    source : $SRC"
 echo "    output : $OUT_DIR"
+echo "    EV     : $EV stops (linear multiplier ${EV_MULT})"
 
 STRIP="$WORK_DIR/strip.png"
 
-# Step 1+2: tonemap HDR linear → sRGB LDR + project equirectangular → cube strip.
-echo "==> tonemap (Hable) + project @ ${EDGE_HIGH}px/face (Lanczos)"
+# Step 1+2: exposure pre-multiply + tonemap HDR linear → sRGB LDR + project
+# equirectangular → cube strip. Single ffmpeg pass.
+echo "==> exposure x${EV_MULT} + tonemap (Mobius) + project @ ${EDGE_HIGH}px/face (Lanczos)"
 # EXR has no colorspace metadata ffmpeg can pick up, so we declare it via
-# setparams (PolyHaven HDRIs are linear sRGB / Rec.709), detour through
-# BT.2020 because that's tonemap's native space, then back to sRGB BT.709.
+# setparams (PolyHaven HDRIs are linear sRGB / Rec.709), then pre-multiply
+# linear values by 2^EV for exposure compensation, detour through BT.2020
+# because that's tonemap's native space, then back to sRGB BT.709.
 ffmpeg -hide_banner -loglevel warning -y -i "$SRC" \
     -vf "setparams=color_trc=linear:color_primaries=bt709:colorspace=bt709:range=pc,\
+lutrgb=r='val*${EV_MULT}':g='val*${EV_MULT}':b='val*${EV_MULT}',\
 zscale=t=linear:p=bt2020:m=bt2020nc,\
-tonemap=hable:desat=0,\
+tonemap=mobius:desat=0,\
 zscale=t=iec61966-2-1:p=bt709:m=bt709,\
 format=rgb24,\
 v360=e:c3x2:w=${STRIP_W}:h=${STRIP_H}:interp=lanczos" \
@@ -90,12 +117,12 @@ echo "==> cropping cube faces"
 cd "$WORK_DIR"
 E=$EDGE_HIGH
 E2=$((E * 2))
-convert "$STRIP" -crop "${E}x${E}+0+0"        +repage posx_full.png
-convert "$STRIP" -crop "${E}x${E}+${E}+0"     +repage negx_full.png
-convert "$STRIP" -crop "${E}x${E}+${E2}+0"    +repage posy_full.png
-convert "$STRIP" -crop "${E}x${E}+0+${E}"     +repage negy_full.png
-convert "$STRIP" -crop "${E}x${E}+${E}+${E}"  +repage posz_full.png
-convert "$STRIP" -crop "${E}x${E}+${E2}+${E}" +repage negz_full.png
+convert "$STRIP" -crop "${E}x${E}+0+0"        +repage posx_full.png  # right → +X
+convert "$STRIP" -crop "${E}x${E}+${E}+0"     +repage negx_full.png  # left  → −X
+convert "$STRIP" -crop "${E}x${E}+${E2}+0"    +repage posy_full.png  # up    → +Y
+convert "$STRIP" -crop "${E}x${E}+0+${E}"     +repage negy_full.png  # down  → −Y
+convert "$STRIP" -crop "${E}x${E}+${E}+${E}"  +repage negz_full.png  # front → −Z (user looks forward, samples NEG_Z)
+convert "$STRIP" -crop "${E}x${E}+${E2}+${E}" +repage posz_full.png  # back  → +Z (user looks backward)
 rm -f "$STRIP"
 
 # Step 4: Lanczos downscale + gentle unsharp.
