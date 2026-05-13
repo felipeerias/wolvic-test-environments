@@ -162,7 +162,7 @@ zip -qj "${ENV_NAME}_misc_srgb.zip" \
     posx_srgb.png negx_srgb.png posy_srgb.png negy_srgb.png posz_srgb.png negz_srgb.png
 
 convert negz.png -resize "512x512" \
-    -gravity Center -crop "256x256+0+0" +repage \
+    -gravity Center -crop "256x256+0+0" \
     "${ENV_NAME}.png"
 
 # Step 6: move outputs into place.
