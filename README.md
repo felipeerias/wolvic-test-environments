@@ -40,13 +40,19 @@ Wolvic uploads the six faces straight into a GL cube map and the user views it f
 
 The HDR path stays in 32-bit float up to the tonemap (ffmpeg `exposure`, `zscale` and `tonemap` all support float), so highlights above 1.0 roll off instead of clipping. `PEAK` (default 10) is the linear value mapped to white; raise it to keep more sky/sun detail, lower it for a brighter, more contrasty result. `DESAT` (default 16) turns the extremely saturated, in-camera-clipped sun core white while leaving the coloured bloom around it alone; set it to 0 for sun-free scenes with bright coloured areas. Until Sept 2026 the exposure step used `lutrgb`, which forced a 16-bit conversion that clipped everything above 1.0; the five EXR environments shipped in Wolvic 1.9 were built that way.
 
-Non-default build parameters of the current EXR environments: `cloister` uses EV -1 and DESAT 0 (sunlit courtyard seen from a shaded passage); all others use the defaults.
+These defaults (source mirrored and rotated 180°, EV 0, PEAK 10, DESAT 16) were validated on a Quest 3 in September 2026. Non-default build parameters of the current EXR environments: `cloister` uses EV -1 and DESAT 0 (sunlit courtyard seen from a shaded passage); all others use the defaults.
+
+Environments built with the earlier versions of this pipeline, before the mirroring compensation, appear mirrored left-right in Wolvic: `cannon`, `dikhololonight`, `goegap`, `hillyterrain` (shipped in Wolvic 1.9), `moonlessgolf`, `ahlbeck`, `belltower` and `pergola`. Rebuilding them with the current script from their sources fixes this. Those five EXR environments were also built with the earlier tonemap that clipped highlights above 1.0.
+
+Sources are not kept in this repository. PolyHaven EXRs that ffmpeg cannot decode (PIZ-compressed with an alpha channel, e.g. `camdeboo_road`, `ladybrand_heritage_house`, `valley_of_desolation`) must have the alpha channel stripped first, for example with the OpenEXR Python bindings; see the header of `build-environment.sh`.
 
 ### From 6 cube map images (legacy)
 
+Prefer `build-environment.sh` above. This manual flow does not compensate for Wolvic's mirroring: faces prepared this way appear mirrored left-right in Wolvic unless the panorama is mirrored horizontally before it is converted to cube faces, and the thumbnail below is taken from the stored face, not from what the user sees.
+
 To get started, you will need a set of 6 PNG images forming a cubemap.
 
-If instead of a cubemap you have one large panorama image, you can convert it with this tool:https://jaxry.github.io/panorama-to-cubemap/
+If instead of a cubemap you have one large panorama image, you can convert it with this tool: https://jaxry.github.io/panorama-to-cubemap/
 
 The source files must have the following names: `negx.png`, `negy.png`, `negz.png`, `posx.png`, `posy.png`, `posz.png`.
 
