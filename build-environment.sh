@@ -5,7 +5,7 @@
 # Outputs into ./ENV_NAME/ following the layout expected by props.json.
 #
 # Usage:
-#   build-environment.sh ENV_NAME SOURCE [EV [PEAK [DESAT]]]
+#   build-environment.sh [--no-flip] ENV_NAME SOURCE [EV [PEAK [DESAT]]]
 #
 # SOURCE must be a 2:1 equirectangular panorama.
 #   .exr / .hdr                 → HDR path: exposure + Mobius tonemap → sRGB LDR,
@@ -78,12 +78,23 @@
 #   5. mipgen encodes ETC2 KTX (linear and sRGB).
 #   6. Five zips + thumbnail copied into ./ENV_NAME/.
 #
-# Orientation: v360 `yaw=180` rotates the entire output cube 180° around Y
-# before extraction, so the user — who otherwise defaults to facing the
-# panorama's back due to Wolvic's skybox geometry conventions (Skybox.cpp
-# negates both vertex positions and UVs) — ends up facing the panorama
-# center. Rotating the whole cube (vs. swapping individual face files) keeps
-# the 6 faces internally consistent so they tile without seams.
+# Orientation: Wolvic uploads the six face files straight into a GL cube map
+# (Skybox.cpp; both the compositor cube layer and the geometry fallback) and
+# the user views it from inside. With the GL cube-map face layout (defined as
+# seen from outside the cube) and Wolvic's / v360's axis conventions, a
+# panorama projected the plain way is seen mirrored left-right and with the
+# user facing the panorama's back (verified on a Quest 3, Sept 2026). Two
+# corrections compensate for this:
+#   * `hflip` mirrors the source horizontally before projection, so that
+#     Wolvic's mirroring shows the scene the right way round (left is left).
+#     Default on; pass --no-flip only for sources that are already mirrored.
+#   * v360 `yaw=180` rotates the entire output cube 180° around Y before
+#     extraction, so the user ends up facing the panorama center.
+# Rotating/mirroring the whole sphere (vs. swapping or flipping individual
+# face files) keeps the 6 faces internally consistent so they tile without
+# seams. The thumbnail is the front face with Wolvic's mirroring applied
+# (always, independent of --no-flip), i.e. it shows what the user sees when
+# facing forward.
 # Verify a build without a headset with ./preview-environment.sh.
 #
 # Output face size is 1024 to match the layer allocation in
@@ -103,8 +114,10 @@
 set -euo pipefail
 
 usage() {
-    print -u2 "Usage: $0 ENV_NAME SOURCE [EV [PEAK [DESAT]]]"
+    print -u2 "Usage: $0 [--no-flip] ENV_NAME SOURCE [EV [PEAK [DESAT]]]"
     print -u2 ""
+    print -u2 "--no-flip: do not mirror the source horizontally (default mirrors it, which"
+    print -u2 "           compensates for Wolvic showing GL cube maps as their mirror image)."
     print -u2 "SOURCE: 2:1 equirectangular panorama."
     print -u2 "        .exr/.hdr are tonemapped (HDR path); .jpg/.png/.tif/.webp used as-is."
     print -u2 "EV:     HDR only. Exposure compensation in stops, -3..3 (default 0.0, which is"
@@ -118,6 +131,16 @@ usage() {
     print -u2 "Example: $0 lubnaig ~/Downloads/lubnaig.jpg"
     exit 1
 }
+
+FLIP=1
+while [[ $# -gt 0 && "$1" == --* ]]; do
+    case "$1" in
+        --no-flip) FLIP=0 ;;
+        --flip)    FLIP=1 ;;
+        *) print -u2 "Error: unknown option '$1'"; usage ;;
+    esac
+    shift
+done
 
 if [[ $# -lt 2 || $# -gt 5 ]]; then
     usage
@@ -197,6 +220,11 @@ mkdir -p "$OUT_DIR"
 echo "==> Building '$ENV_NAME'"
 echo "    source : $SRC (${SRC_DIMS}, ${MODE:u})"
 echo "    output : $OUT_DIR"
+if (( FLIP )); then
+    echo "    flip   : yes (source mirrored horizontally to compensate for Wolvic's cube-map mirroring)"
+else
+    echo "    flip   : no (--no-flip)"
+fi
 if [[ "$MODE" == hdr ]]; then
     echo "    EV     : $EV stops"
     echo "    PEAK   : $PEAK (linear value mapped to white)"
@@ -208,6 +236,10 @@ STRIP="$WORK_DIR/strip.png"
 # Step 1+2: (HDR: exposure pre-multiply + tonemap HDR linear → sRGB LDR) +
 # project equirectangular → cube strip. Single ffmpeg pass.
 PROJECT="v360=e:c3x2:w=${STRIP_W}:h=${STRIP_H}:interp=lanczos:yaw=180"
+if (( FLIP )); then
+    # Mirror the whole sphere (equirectangular x → W-x) before projecting.
+    PROJECT="hflip,${PROJECT}"
+fi
 if [[ "$MODE" == hdr ]]; then
     echo "==> exposure ${EV}EV + tonemap (Mobius, peak ${PEAK}, desat ${DESAT}) + project @ ${EDGE_HIGH}px/face (Lanczos)"
     # EXR has no colorspace metadata ffmpeg can pick up, so we declare it via
@@ -290,8 +322,9 @@ zip -qj "${ENV_NAME}_misc_srgb.zip" \
     posx_srgb.png negx_srgb.png posy_srgb.png negy_srgb.png posz_srgb.png negz_srgb.png
 
 # Thumbnail: negz is the face the user sees when facing forward (see
-# "Orientation" above), i.e. the center of the source panorama.
-convert negz.png -resize "512x512" \
+# "Orientation" above). Wolvic shows every face mirrored, so mirror it here
+# too (regardless of --no-flip) so the thumbnail shows what the user sees.
+convert negz.png -flop -resize "512x512" \
     -gravity Center -crop "256x256+0+0" +repage \
     "${ENV_NAME}.png"
 

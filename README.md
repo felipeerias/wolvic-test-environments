@@ -31,11 +31,12 @@ Use `build-environment.sh` with a 2:1 equirectangular panorama. It projects the 
 # Compare tonemap operators / exposures on an HDR source before building.
 ./preview-tonemap.sh ~/Downloads/venice_sunset_8k.exr mobius 0 10 16
 
-# Re-project a built environment back to an equirectangular PNG to check orientation and seams.
+# Re-project a built environment back to an equirectangular PNG (as Wolvic shows it) to check
+# orientation and seams; it should match the source panorama.
 ./preview-environment.sh goegap
 ```
 
-The scripts rotate the cube so that the centre of the source panorama is what the user sees when facing forward in Wolvic. Remember to add the environment to `props.json` and to this README.
+Wolvic uploads the six faces straight into a GL cube map and the user views it from inside; with the GL face layout and Wolvic's axis conventions, a panorama projected the plain way appears mirrored left-right and with the user facing its back (verified on the headset). The build script compensates by mirroring the source horizontally and rotating the cube 180°, so the centre of the source panorama is what the user sees when facing forward and left stays left. The thumbnail is taken with the mirroring undone, so it always shows what the user sees. Pass `--no-flip` to skip the source mirroring for panoramas that are already mirrored. Remember to add the environment to `props.json` and to this README.
 
 The HDR path stays in 32-bit float up to the tonemap (ffmpeg `exposure`, `zscale` and `tonemap` all support float), so highlights above 1.0 roll off instead of clipping. `PEAK` (default 10) is the linear value mapped to white; raise it to keep more sky/sun detail, lower it for a brighter, more contrasty result. `DESAT` (default 16) turns the extremely saturated, in-camera-clipped sun core white while leaving the coloured bloom around it alone; set it to 0 for sun-free scenes with bright coloured areas. Until Sept 2026 the exposure step used `lutrgb`, which forced a 16-bit conversion that clipped everything above 1.0; the five EXR environments shipped in Wolvic 1.9 were built that way.
 

@@ -10,10 +10,14 @@
 # Reads ./ENV_NAME/ENV_NAME_misc.zip (the uncompressed PNG faces) and writes
 # ENV_NAME_reproj.png (4096x2048) in the current directory unless OUT is given.
 #
-# The faces were produced by build-environment.sh with `v360 ... yaw=180`, so
-# the reverse projection applies yaw=180 again; the result should match the
-# source panorama's framing (centre of the source in the centre of the output).
-# Seams between faces should be invisible.
+# The output shows the environment as Wolvic presents it to the user: the
+# reverse projection applies yaw=180 (undoing the build's rotation) and then
+# mirrors horizontally (reproducing Wolvic's cube-map mirroring, see the
+# "Orientation" notes in build-environment.sh). For an environment built with
+# the default flip the result should match the source panorama: centre of the
+# source in the centre of the output, left is left, seams invisible. For an
+# environment built with --no-flip it shows the mirrored source, which is
+# what Wolvic will show.
 
 set -euo pipefail
 
@@ -43,8 +47,9 @@ montage "$WORK_DIR/posx.png" "$WORK_DIR/negx.png" "$WORK_DIR/posy.png" \
         "$WORK_DIR/negy.png" "$WORK_DIR/posz.png" "$WORK_DIR/negz.png" \
         -tile 3x2 -geometry +0+0 "$WORK_DIR/strip.png"
 
+# yaw=180 undoes the build rotation; hflip reproduces Wolvic's mirroring.
 ffmpeg -hide_banner -loglevel warning -y -i "$WORK_DIR/strip.png" \
-    -vf "v360=c3x2:e:w=4096:h=2048:interp=lanczos:yaw=180" \
+    -vf "v360=c3x2:e:w=4096:h=2048:interp=lanczos:yaw=180,hflip" \
     -frames:v 1 -update 1 "$OUT"
 
 echo "==> $OUT"
