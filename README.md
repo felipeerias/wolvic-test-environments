@@ -131,6 +131,8 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 |    | ID | Title | Author | License |
 | -- | -- | ----- | ------ | ------- |
+| ![](ladybrand/ladybrand.png) | `ladybrand` | [Ladybrand Heritage House](https://polyhaven.com/a/ladybrand_heritage_house) | **Dario Barresi** | CC0 |
+| ![](desolation/desolation.png) | `desolation` | [Valley of Desolation](https://polyhaven.com/a/valley_of_desolation) | **Dario Barresi** | CC0 |
 | ![](lubnaig/lubnaig.png) | `lubnaig` | [Loch Lubnaig](https://www.flickr.com/photos/herbraab/53988616599/) | **H. Raab** | CC BY-NC-ND |
 | ![](fanes/fanes.png) | `fanes` | [360 panorama at Sbarco de Fanes](https://www.flickr.com/photos/sitoo/35978139575/) | **Sitoo** | CC BY-NC-ND |
 | ![](urriellu/urriellu.png) | `urriellu` | [Desde la cima del Picu Urriellu](https://www.flickr.com/photos/sitoo/7999159134/) | **Sitoo** | CC BY-NC-ND |

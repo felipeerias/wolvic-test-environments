@@ -5,6 +5,20 @@
     "environments":
     [
       {
+        "value": "ladybrand",
+        "title": "Ladybrand Heritage House by Dario Barresi (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/ladybrand/ladybrand.png",
+        "payload": "https://darker.ink/wolvic-test-environments/ladybrand/ladybrand.zip",
+        "source": "https://polyhaven.com/a/ladybrand_heritage_house"
+      },
+      {
+        "value": "desolation",
+        "title": "Valley of Desolation by Dario Barresi (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/desolation/desolation.png",
+        "payload": "https://darker.ink/wolvic-test-environments/desolation/desolation.zip",
+        "source": "https://polyhaven.com/a/valley_of_desolation"
+      },
+      {
         "value": "lubnaig",
         "title": "Loch Lubnaig by H. Raab (CC BY-NC-ND)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/lubnaig/lubnaig.png",
