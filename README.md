@@ -17,17 +17,19 @@ buildConfigField 'String', 'PROPS_ENDPOINT', '"https://darker.ink/wolvic-test-en
 Use `build-environment.sh` with a 2:1 equirectangular panorama. It projects the panorama into the 6 cube faces, downsamples them to 1024x1024, encodes the KTX textures and produces the five zips plus the thumbnail in a new folder named after the environment.
 
 ```shell
-# HDR source (EXR/HDR, e.g. an 8K EXR from polyhaven.com). Optional third argument: exposure in stops
-# applied before the Mobius tonemap (default 0.0, used by all shipped EXR environments). Optional fourth
-# argument: tonemap PEAK, the linear value mapped to white (default 10).
+# HDR source (EXR/HDR, e.g. an 8K EXR from polyhaven.com). Optional arguments, in order: EV, exposure in
+# stops applied before the Mobius tonemap (default 0.0); PEAK, the linear value mapped to white (default 10);
+# DESAT, the luma above which highlights are pushed toward white so that sun discs render white instead of
+# as a coloured circle (default 16, 0 disables).
 ./build-environment.sh goegap ~/Downloads/goegap_8k.exr
-./build-environment.sh venicesunset ~/Downloads/venice_sunset_8k.exr 0 10
+./build-environment.sh venicesunset ~/Downloads/venice_sunset_8k.exr 0 10 16
+./build-environment.sh cloister ~/Downloads/historic_cloister_passage_8k.exr -1 10 0
 
 # LDR source (JPG/PNG/TIFF/WebP) is used as-is.
 ./build-environment.sh lubnaig ~/Downloads/lubnaig.jpg
 
 # Compare tonemap operators / exposures on an HDR source before building.
-./preview-tonemap.sh ~/Downloads/venice_sunset_8k.exr mobius 0 20
+./preview-tonemap.sh ~/Downloads/venice_sunset_8k.exr mobius 0 10 16
 
 # Re-project a built environment back to an equirectangular PNG to check orientation and seams.
 ./preview-environment.sh goegap
@@ -35,7 +37,9 @@ Use `build-environment.sh` with a 2:1 equirectangular panorama. It projects the 
 
 The scripts rotate the cube so that the centre of the source panorama is what the user sees when facing forward in Wolvic. Remember to add the environment to `props.json` and to this README.
 
-The HDR path stays in 32-bit float up to the tonemap (ffmpeg `exposure`, `zscale` and `tonemap` all support float), so highlights above 1.0 roll off instead of clipping. The optional fourth argument `PEAK` (default 10) is the linear value mapped to white; raise it to keep more sky/sun detail, lower it for a brighter, more contrasty result. Until Sept 2026 the exposure step used `lutrgb`, which forced a 16-bit conversion that clipped everything above 1.0; the five EXR environments shipped in Wolvic 1.9 were built that way.
+The HDR path stays in 32-bit float up to the tonemap (ffmpeg `exposure`, `zscale` and `tonemap` all support float), so highlights above 1.0 roll off instead of clipping. `PEAK` (default 10) is the linear value mapped to white; raise it to keep more sky/sun detail, lower it for a brighter, more contrasty result. `DESAT` (default 16) turns the extremely saturated, in-camera-clipped sun core white while leaving the coloured bloom around it alone; set it to 0 for sun-free scenes with bright coloured areas. Until Sept 2026 the exposure step used `lutrgb`, which forced a 16-bit conversion that clipped everything above 1.0; the five EXR environments shipped in Wolvic 1.9 were built that way.
+
+Non-default build parameters of the current EXR environments: `cloister` uses EV -1 and DESAT 0 (sunlit courtyard seen from a shaded passage); all others use the defaults.
 
 ### From 6 cube map images (legacy)
 

@@ -5,7 +5,7 @@
 # Outputs into ./ENV_NAME/ following the layout expected by props.json.
 #
 # Usage:
-#   build-environment.sh ENV_NAME SOURCE [EV [PEAK]]
+#   build-environment.sh ENV_NAME SOURCE [EV [PEAK [DESAT]]]
 #
 # SOURCE must be a 2:1 equirectangular panorama.
 #   .exr / .hdr                 → HDR path: exposure + Mobius tonemap → sRGB LDR,
@@ -28,7 +28,18 @@
 # it to keep more detail in very bright skies/suns at the cost of slightly
 # darker upper-midtones; lower it (e.g. 4) for a brighter, more contrasty
 # look with earlier clipping.
-# Use ./preview-tonemap.sh to compare candidate EV/PEAK values without building.
+#
+# DESAT (HDR only) is the linear luma above which highlights are pushed
+# toward white (ffmpeg tonemap `desat`; default 16, 0 disables). Needed for
+# scenes with a visible sun: the in-camera-clipped sun core in PolyHaven
+# HDRIs is extremely saturated (Venice: R 8640, G 1280, B 0) and, because the
+# tonemap scales all channels by the same factor, it would render as a
+# coloured disc that is darker than the near-white bloom around it. With 16
+# only pixels at least 4 stops above white are affected, so sunset colours
+# and skies keep their hue; lower values whiten more of the bloom. Use 0 for
+# sun-free scenes where very bright coloured areas should keep their colour
+# (e.g. a sunlit courtyard seen from a shaded interior).
+# Use ./preview-tonemap.sh to compare candidate EV/PEAK/DESAT values without building.
 #
 # Recommended HDR source: 8K EXR from polyhaven.com. 16K adds processing time
 # with no visible gain at 1024² output. Avoid 4K and below — they don't supply
@@ -47,7 +58,7 @@
 # Pipeline:
 #   1. (HDR only) ffmpeg applies the exposure (float-capable `exposure`
 #      filter), converts to linear BT.2020 (tonemap's native space), runs
-#      tonemap=mobius with an explicit PEAK, then encodes sRGB BT.709. The
+#      tonemap=mobius with an explicit PEAK and DESAT, then encodes sRGB BT.709. The
 #      whole chain stays in 32-bit float until the final rgb24 conversion, so
 #      highlights above 1.0 roll off instead of clipping. Single pass over the
 #      equirectangular so the mapping is consistent across faces. Mobius has
@@ -92,21 +103,23 @@
 set -euo pipefail
 
 usage() {
-    print -u2 "Usage: $0 ENV_NAME SOURCE [EV [PEAK]]"
+    print -u2 "Usage: $0 ENV_NAME SOURCE [EV [PEAK [DESAT]]]"
     print -u2 ""
     print -u2 "SOURCE: 2:1 equirectangular panorama."
     print -u2 "        .exr/.hdr are tonemapped (HDR path); .jpg/.png/.tif/.webp used as-is."
     print -u2 "EV:     HDR only. Exposure compensation in stops, -3..3 (default 0.0, which is"
     print -u2 "        what every shipped EXR environment used; +0.5/+1.0 brighten)."
     print -u2 "PEAK:   HDR only. Linear value mapped to white by the Mobius tonemap (default 10)."
+    print -u2 "DESAT:  HDR only. Luma above which highlights turn white (default 16, 0 = off)."
     print -u2 ""
     print -u2 "Example: $0 goegap ~/Downloads/goegap_8k.exr"
-    print -u2 "Example: $0 venicesunset ~/Downloads/venice_sunset_8k.exr 0 10"
+    print -u2 "Example: $0 venicesunset ~/Downloads/venice_sunset_8k.exr 0 10 16"
+    print -u2 "Example: $0 cloister ~/Downloads/historic_cloister_passage_8k.exr -1 10 0"
     print -u2 "Example: $0 lubnaig ~/Downloads/lubnaig.jpg"
     exit 1
 }
 
-if [[ $# -lt 2 || $# -gt 4 ]]; then
+if [[ $# -lt 2 || $# -gt 5 ]]; then
     usage
 fi
 
@@ -126,10 +139,11 @@ esac
 
 EV="${3:-0.0}"
 PEAK="${4:-10}"
+DESAT="${5:-16}"
 NUM_RE='^[+-]?([0-9]+[.]?[0-9]*|[.][0-9]+)$'
 if [[ "$MODE" == ldr ]]; then
     if [[ $# -ge 3 ]]; then
-        print -u2 "Warning: EV/PEAK are only used for HDR sources; ignoring them for $SRC"
+        print -u2 "Warning: EV/PEAK/DESAT are only used for HDR sources; ignoring them for $SRC"
     fi
 else
     if [[ ! "$EV" =~ $NUM_RE ]]; then
@@ -142,6 +156,10 @@ else
     fi
     if [[ ! "$PEAK" =~ $NUM_RE ]] || (( PEAK <= 1 )); then
         print -u2 "Error: PEAK must be a number greater than 1 (got: '$PEAK')"
+        exit 1
+    fi
+    if [[ ! "$DESAT" =~ $NUM_RE ]] || (( DESAT < 0 )); then
+        print -u2 "Error: DESAT must be a number >= 0 (got: '$DESAT')"
         exit 1
     fi
 fi
@@ -182,6 +200,7 @@ echo "    output : $OUT_DIR"
 if [[ "$MODE" == hdr ]]; then
     echo "    EV     : $EV stops"
     echo "    PEAK   : $PEAK (linear value mapped to white)"
+    echo "    DESAT  : $DESAT (luma above which highlights turn white; 0 = off)"
 fi
 
 STRIP="$WORK_DIR/strip.png"
@@ -190,7 +209,7 @@ STRIP="$WORK_DIR/strip.png"
 # project equirectangular → cube strip. Single ffmpeg pass.
 PROJECT="v360=e:c3x2:w=${STRIP_W}:h=${STRIP_H}:interp=lanczos:yaw=180"
 if [[ "$MODE" == hdr ]]; then
-    echo "==> exposure ${EV}EV + tonemap (Mobius, peak ${PEAK}) + project @ ${EDGE_HIGH}px/face (Lanczos)"
+    echo "==> exposure ${EV}EV + tonemap (Mobius, peak ${PEAK}, desat ${DESAT}) + project @ ${EDGE_HIGH}px/face (Lanczos)"
     # EXR has no colorspace metadata ffmpeg can pick up, so we declare it via
     # setparams (PolyHaven HDRIs are linear sRGB / Rec.709). Everything up to
     # the final format=rgb24 runs on gbrpf32le: `exposure`, zscale and tonemap
@@ -204,7 +223,7 @@ if [[ "$MODE" == hdr ]]; then
     FILTERS="setparams=color_trc=linear:color_primaries=bt709:colorspace=bt709:range=pc,\
 ${EXPOSURE}\
 zscale=t=linear:p=bt2020:m=bt2020nc,\
-tonemap=mobius:desat=0:peak=${PEAK},\
+tonemap=mobius:desat=${DESAT}:peak=${PEAK},\
 zscale=t=iec61966-2-1:p=bt709:m=bt709,\
 format=rgb24,\
 ${PROJECT}"
