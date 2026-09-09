@@ -17,15 +17,17 @@ buildConfigField 'String', 'PROPS_ENDPOINT', '"https://darker.ink/wolvic-test-en
 Use `build-environment.sh` with a 2:1 equirectangular panorama. It projects the panorama into the 6 cube faces, downsamples them to 1024x1024, encodes the KTX textures and produces the five zips plus the thumbnail in a new folder named after the environment.
 
 ```shell
-# HDR source (EXR/HDR, e.g. an 8K EXR from polyhaven.com). The optional third argument is the exposure
-# in stops applied before the Mobius tonemap (default 0.0, used by all shipped EXR environments).
+# HDR source (EXR/HDR, e.g. an 8K EXR from polyhaven.com). Optional third argument: exposure in stops
+# applied before the Mobius tonemap (default 0.0, used by all shipped EXR environments). Optional fourth
+# argument: tonemap PEAK, the linear value mapped to white (default 10).
 ./build-environment.sh goegap ~/Downloads/goegap_8k.exr
+./build-environment.sh venicesunset ~/Downloads/venice_sunset_8k.exr 0 10
 
 # LDR source (JPG/PNG/TIFF/WebP) is used as-is.
 ./build-environment.sh lubnaig ~/Downloads/lubnaig.jpg
 
 # Compare tonemap operators / exposures on an HDR source before building.
-./preview-tonemap.sh ~/Downloads/goegap_8k.exr mobius 0.5
+./preview-tonemap.sh ~/Downloads/venice_sunset_8k.exr mobius 0 20
 
 # Re-project a built environment back to an equirectangular PNG to check orientation and seams.
 ./preview-environment.sh goegap
@@ -33,7 +35,7 @@ Use `build-environment.sh` with a 2:1 equirectangular panorama. It projects the 
 
 The scripts rotate the cube so that the centre of the source panorama is what the user sees when facing forward in Wolvic. Remember to add the environment to `props.json` and to this README.
 
-Known caveat of the HDR path: ffmpeg's `lutrgb` (used for the exposure step) has no float support, so linear values above 1.0 are clipped before the Mobius tonemap and highlights are clipped rather than rolled off. All EXR environments so far were built and approved with this behaviour; a true HDR tonemap (float-capable `exposure=` filter plus an explicit `tonemap=...:peak=`) is a possible follow-up that would need new headset comparisons.
+The HDR path stays in 32-bit float up to the tonemap (ffmpeg `exposure`, `zscale` and `tonemap` all support float), so highlights above 1.0 roll off instead of clipping. The optional fourth argument `PEAK` (default 10) is the linear value mapped to white; raise it to keep more sky/sun detail, lower it for a brighter, more contrasty result. Until Sept 2026 the exposure step used `lutrgb`, which forced a 16-bit conversion that clipped everything above 1.0; the five EXR environments shipped in Wolvic 1.9 were built that way.
 
 ### From 6 cube map images (legacy)
 

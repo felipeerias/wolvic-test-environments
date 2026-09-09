@@ -5,7 +5,7 @@
 # Outputs into ./ENV_NAME/ following the layout expected by props.json.
 #
 # Usage:
-#   build-environment.sh ENV_NAME SOURCE [EV]
+#   build-environment.sh ENV_NAME SOURCE [EV [PEAK]]
 #
 # SOURCE must be a 2:1 equirectangular panorama.
 #   .exr / .hdr                 → HDR path: exposure + Mobius tonemap → sRGB LDR,
@@ -13,14 +13,22 @@
 #   .jpg / .png / .tif / .webp  → LDR path: pixels are already display-referred
 #                                 sRGB, so they are projected as-is.
 #
-# EV (HDR only) is the exposure compensation in stops applied before tonemap
-# (default 0.0). All environments shipped so far from EXR (cannon, goegap,
-# hillyterrain, dikhololonight, moonlessgolf; verified on a Quest 3 in
-# May 2026) were built at EV 0.0 with the Mobius tonemap: Mobius alone gives
-# a bright enough daytime image, and night scenes keep their mood. Reach for
-# +0.5 / +1.0 only if a scene looks dim on the headset; on a monitor +1.0
-# already looks blown out for daytime scenes. Negative values darken.
-# Use ./preview-tonemap.sh to compare candidate EVs without building.
+# EV (HDR only) is the exposure compensation in stops applied before the
+# tonemap (default 0.0, range -3..3). All environments shipped so far from
+# EXR (cannon, goegap, hillyterrain, dikhololonight, moonlessgolf; verified
+# on a Quest 3 in May 2026) were built at EV 0.0. Reach for +0.5 / +1.0 only
+# if a scene looks dim on the headset. Negative values darken.
+#
+# PEAK (HDR only) is the linear scene value that the Mobius tonemap maps to
+# white (default 10, which is also ffmpeg's default for untagged linear
+# input). The curve is applied to each pixel's brightest RGB component (after
+# exposure and the BT.2020 conversion): pixels whose max component is below
+# the Mobius knee (0.3) pass through unchanged, brighter ones are scaled down
+# smoothly so that PEAK lands on white, and anything above PEAK clips. Raise
+# it to keep more detail in very bright skies/suns at the cost of slightly
+# darker upper-midtones; lower it (e.g. 4) for a brighter, more contrasty
+# look with earlier clipping.
+# Use ./preview-tonemap.sh to compare candidate EV/PEAK values without building.
 #
 # Recommended HDR source: 8K EXR from polyhaven.com. 16K adds processing time
 # with no visible gain at 1024² output. Avoid 4K and below — they don't supply
@@ -37,16 +45,22 @@
 #   $ENV_NAME_misc_srgb.zip  — uncompressed PNG sRGB (Quest after v69)
 #
 # Pipeline:
-#   1. (HDR only) ffmpeg multiplies linear values by 2^EV (exposure
-#      compensation), then tonemap=mobius converts linear → sRGB LDR in a
-#      single pass over the equirectangular so the mapping is consistent
-#      across faces. Mobius has a gentler knee than hable, which crushed the
-#      moody feel of overcast/night scenes. Caveat: lutrgb (the exposure
-#      step) has no float support, so ffmpeg converts to 16-bit integer
-#      before it and linear values above 1.0 are clipped there (and again
-#      after the multiply); highlights are therefore clipped rather than
-#      rolled off. This is how all shipped
-#      EXR environments were built and approved, so it is kept as-is.
+#   1. (HDR only) ffmpeg applies the exposure (float-capable `exposure`
+#      filter), converts to linear BT.2020 (tonemap's native space), runs
+#      tonemap=mobius with an explicit PEAK, then encodes sRGB BT.709. The
+#      whole chain stays in 32-bit float until the final rgb24 conversion, so
+#      highlights above 1.0 roll off instead of clipping. Single pass over the
+#      equirectangular so the mapping is consistent across faces. Mobius has
+#      a gentler knee than hable, which crushed the moody feel of overcast/
+#      night scenes.
+#      History: until Sept 2026 the exposure step used lutrgb, which has no
+#      float support; ffmpeg silently converted to 16-bit integer before it
+#      and clipped everything above 1.0, so bright skies/water came out as
+#      flat, textureless highlights (all at the same ~0.83 sRGB grey-white).
+#      At EV 0 and PEAK 10 the new chain maps every pixel that was not
+#      clipped before (max component ≤ 1.0 linear) identically; only the
+#      formerly clipped highlights change. With EV ≠ 0 the results differ
+#      slightly for pixels the old chain had clipped after the multiply.
 #   2. ffmpeg v360 projects equirectangular → 6 cube faces at 2048² (Lanczos).
 #   3. ImageMagick crops the 3x2 strip into 6 face PNGs.
 #   4. Lanczos-downscale to 1024² + gentle unsharp pass.
@@ -78,20 +92,21 @@
 set -euo pipefail
 
 usage() {
-    print -u2 "Usage: $0 ENV_NAME SOURCE [EV]"
+    print -u2 "Usage: $0 ENV_NAME SOURCE [EV [PEAK]]"
     print -u2 ""
     print -u2 "SOURCE: 2:1 equirectangular panorama."
     print -u2 "        .exr/.hdr are tonemapped (HDR path); .jpg/.png/.tif/.webp used as-is."
-    print -u2 "EV:     HDR only. Exposure compensation in stops (default 0.0, which is"
+    print -u2 "EV:     HDR only. Exposure compensation in stops, -3..3 (default 0.0, which is"
     print -u2 "        what every shipped EXR environment used; +0.5/+1.0 brighten)."
+    print -u2 "PEAK:   HDR only. Linear value mapped to white by the Mobius tonemap (default 10)."
     print -u2 ""
     print -u2 "Example: $0 goegap ~/Downloads/goegap_8k.exr"
-    print -u2 "Example: $0 goegap ~/Downloads/goegap_8k.exr 0.5"
+    print -u2 "Example: $0 venicesunset ~/Downloads/venice_sunset_8k.exr 0 10"
     print -u2 "Example: $0 lubnaig ~/Downloads/lubnaig.jpg"
     exit 1
 }
 
-if [[ $# -lt 2 || $# -gt 3 ]]; then
+if [[ $# -lt 2 || $# -gt 4 ]]; then
     usage
 fi
 
@@ -110,17 +125,25 @@ case "$EXT" in
 esac
 
 EV="${3:-0.0}"
-EV_MULT=1
+PEAK="${4:-10}"
+NUM_RE='^[+-]?([0-9]+[.]?[0-9]*|[.][0-9]+)$'
 if [[ "$MODE" == ldr ]]; then
-    if [[ $# -eq 3 ]]; then
-        print -u2 "Warning: EV is only used for HDR sources; ignoring '$3' for $SRC"
+    if [[ $# -ge 3 ]]; then
+        print -u2 "Warning: EV/PEAK are only used for HDR sources; ignoring them for $SRC"
     fi
 else
-    if [[ ! "$EV" =~ ^[+-]?([0-9]+[.]?[0-9]*|[.][0-9]+)$ ]]; then
+    if [[ ! "$EV" =~ $NUM_RE ]]; then
         print -u2 "Error: EV must be a number in stops (got: '$EV')"
         exit 1
     fi
-    EV_MULT=$(python3 -c "import sys; print(2 ** float(sys.argv[1]))" "$EV")
+    if (( EV < -3 || EV > 3 )); then
+        print -u2 "Error: EV must be within -3..3 (ffmpeg exposure filter range), got $EV"
+        exit 1
+    fi
+    if [[ ! "$PEAK" =~ $NUM_RE ]] || (( PEAK <= 1 )); then
+        print -u2 "Error: PEAK must be a number greater than 1 (got: '$PEAK')"
+        exit 1
+    fi
 fi
 
 # Sanity-check the source is 2:1 equirectangular. ffmpeg autorotates sources
@@ -157,7 +180,8 @@ echo "==> Building '$ENV_NAME'"
 echo "    source : $SRC (${SRC_DIMS}, ${MODE:u})"
 echo "    output : $OUT_DIR"
 if [[ "$MODE" == hdr ]]; then
-    echo "    EV     : $EV stops (linear multiplier ${EV_MULT})"
+    echo "    EV     : $EV stops"
+    echo "    PEAK   : $PEAK (linear value mapped to white)"
 fi
 
 STRIP="$WORK_DIR/strip.png"
@@ -166,23 +190,21 @@ STRIP="$WORK_DIR/strip.png"
 # project equirectangular → cube strip. Single ffmpeg pass.
 PROJECT="v360=e:c3x2:w=${STRIP_W}:h=${STRIP_H}:interp=lanczos:yaw=180"
 if [[ "$MODE" == hdr ]]; then
-    echo "==> exposure x${EV_MULT} + tonemap (Mobius) + project @ ${EDGE_HIGH}px/face (Lanczos)"
+    echo "==> exposure ${EV}EV + tonemap (Mobius, peak ${PEAK}) + project @ ${EDGE_HIGH}px/face (Lanczos)"
     # EXR has no colorspace metadata ffmpeg can pick up, so we declare it via
-    # setparams (PolyHaven HDRIs are linear sRGB / Rec.709), then pre-multiply
-    # linear values by 2^EV for exposure compensation, detour through BT.2020
-    # because that's tonemap's native space, then back to sRGB BT.709.
-    # NOTE: lutrgb has no float support, so ffmpeg silently converts to
-    # 16-bit integer RGB before it, clipping linear values above 1.0, and
-    # lutrgb saturates its own output as well. The chain therefore behaves
-    # as clip(0,1) → ×2^EV → clip(0,1) → Mobius knee → sRGB rather than as
-    # a true HDR tonemap (so EV > 0 only brightens values below 2^-EV). Every shipped EXR environment was
-    # built (and approved on a headset) with exactly this behaviour, so it
-    # is kept for consistency; see README for the follow-up. Do NOT insert a
-    # `format=gbrpf32le` here: swscale float→float conversion also clips.
+    # setparams (PolyHaven HDRIs are linear sRGB / Rec.709). Everything up to
+    # the final format=rgb24 runs on gbrpf32le: `exposure`, zscale and tonemap
+    # all support float, so no clipping happens before the tonemap. Do NOT
+    # reintroduce lutrgb (no float support → auto-converted to 16-bit and
+    # clipped) or a `format=gbrpf32le` (swscale float→float also clips).
+    EXPOSURE=""
+    if (( EV != 0 )); then
+        EXPOSURE="exposure=exposure=${EV},"
+    fi
     FILTERS="setparams=color_trc=linear:color_primaries=bt709:colorspace=bt709:range=pc,\
-lutrgb=r='val*${EV_MULT}':g='val*${EV_MULT}':b='val*${EV_MULT}',\
+${EXPOSURE}\
 zscale=t=linear:p=bt2020:m=bt2020nc,\
-tonemap=mobius:desat=0,\
+tonemap=mobius:desat=0:peak=${PEAK},\
 zscale=t=iec61966-2-1:p=bt709:m=bt709,\
 format=rgb24,\
 ${PROJECT}"
