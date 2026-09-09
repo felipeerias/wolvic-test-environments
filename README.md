@@ -12,6 +12,31 @@ buildConfigField 'String', 'PROPS_ENDPOINT', '"https://darker.ink/wolvic-test-en
 
 ## Procedure
 
+### From an equirectangular panorama (recommended)
+
+Use `build-environment.sh` with a 2:1 equirectangular panorama. It projects the panorama into the 6 cube faces, downsamples them to 1024x1024, encodes the KTX textures and produces the five zips plus the thumbnail in a new folder named after the environment.
+
+```shell
+# HDR source (EXR/HDR, e.g. an 8K EXR from polyhaven.com). The optional third argument is the exposure
+# in stops applied before the Mobius tonemap (default 0.0, used by all shipped EXR environments).
+./build-environment.sh goegap ~/Downloads/goegap_8k.exr
+
+# LDR source (JPG/PNG/TIFF/WebP) is used as-is.
+./build-environment.sh lubnaig ~/Downloads/lubnaig.jpg
+
+# Compare tonemap operators / exposures on an HDR source before building.
+./preview-tonemap.sh ~/Downloads/goegap_8k.exr mobius 0.5
+
+# Re-project a built environment back to an equirectangular PNG to check orientation and seams.
+./preview-environment.sh goegap
+```
+
+The scripts rotate the cube so that the centre of the source panorama is what the user sees when facing forward in Wolvic. Remember to add the environment to `props.json` and to this README.
+
+Known caveat of the HDR path: ffmpeg's `lutrgb` (used for the exposure step) has no float support, so linear values above 1.0 are clipped before the Mobius tonemap and highlights are clipped rather than rolled off. All EXR environments so far were built and approved with this behaviour; a true HDR tonemap (float-capable `exposure=` filter plus an explicit `tonemap=...:peak=`) is a possible follow-up that would need new headset comparisons.
+
+### From 6 cube map images (legacy)
+
 To get started, you will need a set of 6 PNG images forming a cubemap.
 
 If instead of a cubemap you have one large panorama image, you can convert it with this tool:https://jaxry.github.io/panorama-to-cubemap/
@@ -58,6 +83,10 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 |    | ID | Title | Author | License |
 | -- | -- | ----- | ------ | ------- |
+| ![](cannon/cannon.png) | `cannon` | [Cannon](https://polyhaven.com/a/cannon) | **Greg Zaal** | CC0 |
+| ![](dikhololonight/dikhololonight.png) | `dikhololonight` | [Dikhololo Night](https://polyhaven.com/a/dikhololo_night) | **Greg Zaal** | CC0 |
+| ![](goegap/goegap.png) | `goegap` | [Goegap](https://polyhaven.com/a/goegap) | **Greg Zaal** | CC0 |
+| ![](hillyterrain/hillyterrain.png) | `hillyterrain` | [Hilly Terrain 01](https://polyhaven.com/a/hilly_terrain_01) | **Sergej Majboroda** | CC0 |
 | ![](eveningroad/eveningroad.png) | `eveningroad` | [Rural Evening Road](https://polyhaven.com/a/rural_evening_road) | **Alexander Scholten** | CC0 |
 | ![](malibuoverlook/malibuoverlook.png) | `malibuoverlook` | [_Malibu Overlook_](https://sketchfab.com/3d-models/sky-pano-malibu-overlook-8ef3cf8d717d4598a661e41fc2a7097f) | **MozillaHubs** at Sketchfab | CC BY-NC-SA |
 | ![](snowycabin/snowycabin.png) | `snowycabin` | [_Snowy Cabin_](https://sketchfab.com/3d-models/free-skybox-snowy-cabin-c672c14f6aa64af89b1f52d6d1ac8b24) | **Paul** at Sketchfab | CC BY |
@@ -96,6 +125,15 @@ cp ${ENVNAME}.png *.zip ../wolvic-test-environments/${ENVNAME}
 
 |    | ID | Title | Author | License |
 | -- | -- | ----- | ------ | ------- |
+| ![](lubnaig/lubnaig.png) | `lubnaig` | [Loch Lubnaig](https://www.flickr.com/photos/herbraab/53988616599/) | **H. Raab** | CC BY-NC-ND |
+| ![](fanes/fanes.png) | `fanes` | [360 panorama at Sbarco de Fanes](https://www.flickr.com/photos/sitoo/35978139575/) | **Sitoo** | CC BY-NC-ND |
+| ![](urriellu/urriellu.png) | `urriellu` | [Desde la cima del Picu Urriellu](https://www.flickr.com/photos/sitoo/7999159134/) | **Sitoo** | CC BY-NC-ND |
+| ![](milfordsound/milfordsound.png) | `milfordsound` | [Milford Sound, Fiordland, New Zealand](https://www.flickr.com/photos/sitoo/33528392431/) | **Sitoo** | CC BY-NC-ND |
+| ![](cobblestone/cobblestone.png) | `cobblestone` | [Cobblestone Parish Road](https://polyhaven.com/a/cobblestone_parish_road) | **Elvis Posa** | CC0 |
+| ![](cloister/cloister.png) | `cloister` | [Historic Cloister Passage](https://polyhaven.com/a/historic_cloister_passage) | **Elvis Posa** | CC0 |
+| ![](camdeboo/camdeboo.png) | `camdeboo` | [Camdeboo Road](https://polyhaven.com/a/camdeboo_road) | **Dario Barresi, Jarod Guest** | CC0 |
+| ![](venicesunset/venicesunset.png) | `venicesunset` | [Venice Sunset](https://polyhaven.com/a/venice_sunset) | **Greg Zaal** | CC0 |
+| ![](moonlessgolf/moonlessgolf.png) | `moonlessgolf` | [Moonless Golf](https://polyhaven.com/a/moonless_golf) | **Greg Zaal** | CC0 |
 | ![](ahlbeck/ahlbeck.png) | `ahlbeck` | [Ahlbeck Seebrücke](https://www.flickr.com/photos/165401243@N04/54803640421/") |  **j.nagel** | Public Domain |
 | ![](belltower/belltower.png) | `belltower` | [Bell Tower](https://polyhaven.com/a/bell_tower") | **Dario Barresi** | CC0 |
 | ![](pergola/pergola.png) | `pergola` | [Pergola Walkway](https://polyhaven.com/a/pergola_walkway") | **Dario Barresi** | CC0 |

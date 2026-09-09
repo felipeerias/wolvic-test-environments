@@ -5,6 +5,62 @@
     "environments":
     [
       {
+        "value": "lubnaig",
+        "title": "Loch Lubnaig by H. Raab (CC BY-NC-ND)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/lubnaig/lubnaig.png",
+        "payload": "https://darker.ink/wolvic-test-environments/lubnaig/lubnaig.zip",
+        "source": "https://www.flickr.com/photos/herbraab/53988616599/"
+      },
+      {
+        "value": "fanes",
+        "title": "Sbarco de Fanes by Sitoo (CC BY-NC-ND)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/fanes/fanes.png",
+        "payload": "https://darker.ink/wolvic-test-environments/fanes/fanes.zip",
+        "source": "https://www.flickr.com/photos/sitoo/35978139575/"
+      },
+      {
+        "value": "urriellu",
+        "title": "Picu Urriellu by Sitoo (CC BY-NC-ND)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/urriellu/urriellu.png",
+        "payload": "https://darker.ink/wolvic-test-environments/urriellu/urriellu.zip",
+        "source": "https://www.flickr.com/photos/sitoo/7999159134/"
+      },
+      {
+        "value": "milfordsound",
+        "title": "Milford Sound, Fiordland, New Zealand by Sitoo (CC BY-NC-ND)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/milfordsound/milfordsound.png",
+        "payload": "https://darker.ink/wolvic-test-environments/milfordsound/milfordsound.zip",
+        "source": "https://www.flickr.com/photos/sitoo/33528392431/"
+      },
+      {
+        "value": "cobblestone",
+        "title": "Cobblestone Parish Road by Elvis Posa (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/cobblestone/cobblestone.png",
+        "payload": "https://darker.ink/wolvic-test-environments/cobblestone/cobblestone.zip",
+        "source": "https://polyhaven.com/a/cobblestone_parish_road"
+      },
+      {
+        "value": "cloister",
+        "title": "Historic Cloister Passage by Elvis Posa (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/cloister/cloister.png",
+        "payload": "https://darker.ink/wolvic-test-environments/cloister/cloister.zip",
+        "source": "https://polyhaven.com/a/historic_cloister_passage"
+      },
+      {
+        "value": "camdeboo",
+        "title": "Camdeboo Road by Dario Barresi, Jarod Guest (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/camdeboo/camdeboo.png",
+        "payload": "https://darker.ink/wolvic-test-environments/camdeboo/camdeboo.zip",
+        "source": "https://polyhaven.com/a/camdeboo_road"
+      },
+      {
+        "value": "venicesunset",
+        "title": "Venice Sunset by Greg Zaal (CC0)",
+        "thumbnail": "https://darker.ink/wolvic-test-environments/venicesunset/venicesunset.png",
+        "payload": "https://darker.ink/wolvic-test-environments/venicesunset/venicesunset.zip",
+        "source": "https://polyhaven.com/a/venice_sunset"
+      },
+      {
         "value": "cannon",
         "title": "Cannon by Greg Zaal (CC0)",
         "thumbnail": "https://darker.ink/wolvic-test-environments/cannon/cannon.png",
